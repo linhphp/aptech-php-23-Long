@@ -1,0 +1,107 @@
+.Tổng{
+   width: 1000px;
+   height: 1000px;
+}
+.Tổng1{
+   width: 1000px;
+   height: 100px;
+   background-color: orange;
+   display: flex;
+   
+}
+.một{
+   width: 70%;
+   height: 40px;
+   background-color: blue;
+   text-align: center;
+   margin: 25px;
+   border: 1px solid white;
+ 
+}
+.hai{
+   width: 30%;
+   height: 40px;
+   background-color: green;
+   text-align: center;
+   margin: 25px;
+   border: 1px solid white;
+}
+.Tổng2{
+   width: 1000px;
+   height: 200px;
+   background-color: grey;
+   display: flex;
+}
+.Ô34{
+   width: 50%;
+   height: 100%;
+   background-color: chartreuse;
+}
+.ba{
+   background-color: blue;
+   width: 250px;
+   height: 30px;
+   text-align: center;
+   margin: 40px 110px;
+   border: 1px solid white;
+   
+}
+.bốn{
+   background-color:blue ;
+   width: 250px;
+   height: 30px;
+   text-align: center;
+   margin: 40px 110px;
+   border: 1px solid white;
+   
+}
+.Ô56{
+   width: 50%;
+   height: 100%;
+   background-color: chartreuse;
+   display: flex;
+}
+.năm{
+   background-color:blue ;
+   width: 170px;
+   height: 100px;
+   text-align: right;
+  margin: 40px;
+  border:1px solid white;
+
+}
+.sáu{
+   background-color:green ;
+   width: 170px;
+   height: 100px;
+   text-align: right;
+   margin: 40px;
+   border: 1px solid white;
+}
+ .Div3{
+    background-color: black;
+    width: 1000px;
+    height: 70px;
+    display: flex;
+ }  
+ .Ô7{
+    background-color: blue;
+    height: 20px;
+    width: 33.33%;
+    margin: 18px;
+    border: 1px solid white;
+ }
+ .Ô8{
+   background-color: blue;
+   height: 20px;
+   width: 33.33%;
+   margin: 18px;
+   border: 1px solid white;
+}
+.Ô9{
+   background-color: blue;
+   height: 20px;
+   width: 33.33%;
+   margin: 18px;
+   border: 1px solid white;
+}

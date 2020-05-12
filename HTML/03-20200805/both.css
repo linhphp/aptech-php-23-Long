@@ -1,0 +1,21 @@
+h1.CT{background-color: gray;color: honeydew;
+text-align: center;}
+.Div-Tổng{
+    display: flex;
+ 
+}
+.Div-1{width: 20%;
+    height: 250px;
+   background-color: gainsboro;
+    float: left;
+}
+
+.Div-2{
+    width: 80%;
+    height: 250px;
+    background-color: rgb(18, 231, 18);
+    float: right;
+}
+h2.FT{text-align: center;
+background-color: grey;
+color: honeydew;}
