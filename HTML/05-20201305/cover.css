@@ -1,1 +1,14 @@
 body{height:100vh;}
+.home{
+    border-bottom: 3px solid white;
+}
+.col-6{ height: 10% !important;}
+.Learn{ background-color:whitesmoke; color: black;
+    width: 200px; margin:auto;
+    text-align: center !important;
+
+}
+a:hover{ 
+    background-color: whitesmoke;
+    text-decoration: none;
+}

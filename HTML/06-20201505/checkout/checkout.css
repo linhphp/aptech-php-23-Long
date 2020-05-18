@@ -1,0 +1,51 @@
+.B{
+    background-color: blueviolet;
+    color: white;
+    height: 65px;
+    width: 65px;
+    text-align: center;
+    margin: 50px auto;
+    border-radius: 5px;
+    font-size: 55px;
+}
+.head{
+    text-align: center;
+    width: 550px;
+    margin: 10px auto;
+}
+
+.row{width: 1000px;
+    height: 500px;
+    background-color: cyan;
+    margin: 0 auto;
+    display: flex;
+
+}
+.col-8{
+    background-color: whitesmoke;
+    width: 65%;
+    height: 500px;
+    display:flex;
+   
+}
+.col-4{
+    background-color:wheat;
+    width: 35%;
+    height: 500px;
+}
+.tên{width: 230px;
+    height: 30px;
+    background-color: none;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+.họ{width: 230px;
+    height: 30px;
+    margin:20px auto;
+    border-radius: 5px;
+    background-color:none;
+   
+    
+}
+
+
