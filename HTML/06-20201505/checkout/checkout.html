@@ -1,41 +1,188 @@
 <!DOCTYPE html>
-<html >
+<html>
+
 <head>
-    <link rel="stylesheet" href="checkout.css">
-    
+  <link rel="stylesheet" href="checkout.css">
+  <link rel="stylesheet" href="bootstrap.css">
 </head>
+
 <body>
-    <div class="head">
-        <h2 class="B">B</h2>
-        <h1>Checkout form</h1>
-        <p>Below is an example form built entirely with Bootstrap’s form controls. 
-            Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-8">
-              <h2>Billing address</h2><br>
-              <br>
-                <p> First name <input class="tên" type="text"></p>
-                  
-              
-                 
-                <p> Last name <input class="họ" type="text"></p>
-              
-
-
-            </div>
-            <div class="col-4">
-              <h2>Your cart</h2>
-            
-            </div>
-           
-               
-                
-                
-           
+  <div class="head">
+    <h2 class="B">B</h2>
+    <h1>Checkout form</h1>
+    <p>Below is an example form built entirely with Bootstrap’s form controls.
+      Each required form group has a validation state that can be triggered by attempting to submit the form without
+      completing it.</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <h2>Billing address</h2>
+        <div class="row2">
+          <div class="FN">
+            <p> First name</p>
+          </div>
+          <div class="LN">
+            <p> Last name</p>
+          </div>
         </div>
+        <div class="row3">
+          <input class="tên" type="text">
+          <input class="họ" type="text">
+        </div>
+        <p>Username<p>
+          
+          <span> @ </span>
+          <input class="US" type="text" placeholder="Username">
+        <p>Email (Optional)</p>
+        <input class="Email" type="Email" placeholder="you@example.com">
+        <p>Address</p>
+        <input class="Address" type="text" placeholder="1234 Main St">
+        <p>Address 2(Optional)</p>
+        <input class="Address2" type="text" placeholder="Apartment or suite">
+        <div class="row4">
+          <div class="Country">
+            <p>Country</p>
+          </div>
+          <div class="State">
+            <p>State</p>
+          </div>
+          <div class="Zip">
+            <p>Zip</p>
+          </div>
+        </div>
+        
+        <select class="Choose">
+          <option value="">Choose...</option>
+          <option value="">United States</option>
+        </select>
+        <select  class="state">
+          <option value="">Choose...</option>
+          <option value="">California</option>
+        </select>
+        <input class="zip" type="text">
+        <hr>
+        <input type="checkbox" id="kick">
+        <label for="kick"> Shipping address is the same as
+          my billing address</label><br>
+        <input type="checkbox" id="click">
+        <label for="click"> Save this information
+          for next time</label>
+        <hr>
+        <h2>Payment</h2>
+        <input type="radio" id="Credit" name="gender" value="Credit card">
+        <label for="Credit card">Credit card</label><br>
+        <input type="radio" id="Debit" name="gender" value="Debit card">
+        <label for="Debit card">Debit card</label><br>
+        <input type="radio" id="PayPal" name="gender" value="Paypal">
+        <label for="PayPal">PayPal</label><br>
+        <div class="row5">
+          <div class="NOC">
+            <p> Name on card</p>
+          </div>
+          <div class="CCN">
+            <p> Credit card number</p>
+          </div>
+        </div>
+        <div class="row6">
+          <input class="noc" type="text">
+          <input class="ccn" type="text">
+        </div>
+        <p>Full name as displayed on card </p>
+        <div class="row6">
+          <div class="Ex">
+            <p>Expiration</p>
+          </div>
+          <div class="CVV">
+            <p>CVV</p>
+          </div>
+        </div>
+        <div class="row7">
+          <input class="ex" type="text">
+          <input class="cvv" type="text">
+        </div>
+        <hr>
+        <input class="sign" type="button" value="Continue to checkout">
+      </div>
+      <div class="col-4">
+        <div class="YC3">
+          <div class="YC">
+            <h2>Your cart</h2>
+          </div>
+          <div class="N3">
+            <h1>3</h1>
+          </div>
+        </div>
+        <div class="PN">
+          <div class="pn">
+            <h4>Produc name </h4>
+            <p>Brief description</p>
+          </div>
+          <div class="M12">
+            <p>$12</p>
+          </div> 
+        </div>
+        <div class="SP">
+          <div class="sp">
+            <h4>Second product </h4>
+            <p>Brief description</p>
+          </div>
+          <div class="M8">
+            <p>$8</p>
+          </div> 
+        </div>
+        <div class="TI">
+          <div class="ti">
+            <h4>Third item </h4>
+            <p>Brief description</p>
+          </div>
+          <div class="M5">
+            <p>$5</p>
+          </div> 
+        </div>
+        <div class="PC">
+          <div class="pc">
+            <h4>Promo code </h4>
+            <p>EXAMPLECODE</p>
+          </div>
+          <div class="M5-">
+            <p>$5</p>
+          </div> 
+        </div>
+        <div class="TT">
+          <div class="tt">
+            <h4>Total (USD) </h4>
+          </div>
+          <div class="M20">
+            <p>$20</p>
+          </div> 
+        </div>
+        <div class="Code">
+            <input class="code" type="text"placeholder="Promo code">
+          <div class="rd">
+            <p>Redeem</p>
+          </div> 
+        </div>
+
+       
+        
+
+      </div>
+
+
+
+
+
     </div>
-    <div class="footer"></div>
+  </div>
+
+  <div class="footer">
+    <p> &copy;2017-2019 Company Name </p>
+    <a href="">Privacy</a>
+    <a href="">Terms</a>
+    <a href="">Support</a>
+  </div>
+
 </body>
+
 </html>
