@@ -1,0 +1,27 @@
+
+.container{
+    width: 1000px;
+    height: 1000px;
+}
+
+.row{
+  
+    width: 1000px;
+    height: 100px;
+    
+}
+.N1 {
+    background-color: blue;
+}
+.N2{
+    background-color: blueviolet;
+}
+.N3{background-color: cadetblue;
+}
+.N4{
+    background-color: darkgoldenrod;
+}
+.N5{background-color: darkorchid;
+}
+.N6{background-color: darkslategray;
+}

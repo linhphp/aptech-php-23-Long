@@ -1,0 +1,46 @@
+.row{
+    background-color: black;
+    color: blanchedalmond;
+    width: 1000px;
+    height: 50px;
+}
+.T1{
+    width: 80px;
+    height: 40px;
+    background-color: blueviolet;
+   
+}
+.H1{
+    height: 2px;
+    width: 50px;
+    background-color: burlywood;
+}
+.H2{
+    height: 2px;
+    width: 50px;
+    background-color: burlywood;
+}
+.H3{
+    height: 2px;
+    width: 50px;
+    background-color: burlywood;
+}
+.T2{
+    width: 500px;
+    background-color: none;
+    height: 100px;
+    display: flex;
+}
+.O1{
+    width: 200px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 5px;
+}
+.O2{
+    width: 200px;
+    height: 50px;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+}
+
