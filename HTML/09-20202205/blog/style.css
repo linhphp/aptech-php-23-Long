@@ -1,0 +1,47 @@
+.container{
+    width: 1000px;
+}
+.row>a{
+    color: teal;
+    margin: 0 auto;
+}
+.col-6{
+    display:flex;
+    margin-right: auto;
+    padding-right: 0;
+}
+.TB2{
+    background-color: gray;
+    width: 80%;
+    text-align: center;
+}
+.TB2>p{
+    color: honeydew;
+    margin: 80px auto;
+}
+
+.Older{
+    width: 60px;
+    height: 40px;
+    border-radius: 15px;
+    color: blue;
+    border-color: blue;
+    margin: 0 10px;
+}
+.Older:hover{
+    background-color: blue;
+    color: white;
+}
+.Never{width: 60px;
+    height: 40px;
+    border-radius: 15px;
+}
+.col-4>ul>li{
+    list-style: none;
+}
+.footer{
+    text-align: center;
+}
+.footer>ul>li{
+    list-style: none;
+}

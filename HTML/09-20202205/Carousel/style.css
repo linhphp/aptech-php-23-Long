@@ -1,0 +1,64 @@
+
+ul>li{
+    float: left;
+    list-style: none;
+}
+ul>li>a{
+    display: block;
+    text-decoration: none;
+    line-height: 40px;
+    height: 40px;
+    padding: 0px 10px 0px 0px;
+    color: white;
+}
+.sign{
+    width: 150px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+.col-3{
+line-height: 40px;
+margin: 15px auto;
+
+}
+.Search{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    margin:0px auto;
+}
+.bt{
+    margin:0px auto;
+    height: 40px;
+    border-radius: 5px;
+    background-color: grey;
+    color: green;
+    border: green solid 2px;
+}
+.bt:hover{
+    color:white;
+    background-color: green;
+}
+.H1{
+    width: 120px;
+    height: 120px;
+    background-color: grey;
+    border-radius: 50%;
+    margin:30px auto;
+}
+.view{
+    background-color: grey;
+    border-radius: 5px;
+    width: 120px;
+    color: white;
+}
+.col-5>h3{
+    text-align: center;
+    color: turquoise;
+    margin: 200px 100px;
+}
+.col-7{
+    margin: auto;
+}
