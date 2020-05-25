@@ -1,0 +1,139 @@
+.head{
+    width: 1000px;
+    height: 100px;
+    position: fixed;
+    top:0;
+}
+.container{
+    background-color: whitesmoke;
+}
+.new{
+    height:50px ;
+    width: 70px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    border-color: white;
+    font-size: 25px;
+    margin: 10px auto;
+}
+.search{
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    border-color: gray;
+    margin: 15px 100px;
+}
+.sign{
+    width: 150px;
+    height: 35px;
+    background-color: white;
+    color: blue;
+    border-radius: 5px;
+    margin: 15px 100px;
+    border-color: red;
+}
+.sign:hover{
+    border-color: blue;
+}
+.col-3>ul>li{
+    list-style: none;
+    margin: 15px auto;
+    text-align: center;
+}
+.TC{
+    height: 60px;
+    width: 200px;
+    border-radius: 5px;
+    border-color: red;
+}
+.TC:hover{
+    border-color: blue;
+}
+.TH{
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    border-color: red
+}
+.TH:hover{
+    border-color: blue;
+}
+.ĐK{
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    border-color: red;
+}
+.ĐK:hover{
+    border-color: blue;
+}
+.ĐX{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-color: chartreuse;
+}
+.ĐX:hover{
+    border-color: blue;
+}
+.ND{
+    width: 200px;
+    height: 120px;
+}
+.TV{
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    border-color: red;
+}
+.TV:hover{
+    border-color: blue;
+}
+.LS{
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    border-color: red;
+}
+.LS:hover{
+    border-color: blue;
+}
+.AM{
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    border-color: red;
+}
+.AM:hover{
+    border-color: blue;
+}
+
+.TT{
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    border-color: red;
+}
+.TT:hover{
+    border-color: blue;
+}
+
+.TCh{
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    border-color: red;
+}
+.TCh:hover{
+    border-color: blue;
+}
+.TG{
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    border-color: red;
+}
+.TG:hover{
+    border-color: blue;
+}
