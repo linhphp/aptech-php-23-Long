@@ -1,5 +1,3 @@
+var a=5;
 
-
-   var ea = document.getElementById('den').src="pic_bulbon.gif";
-
-   console.log('ea');
+  console.log(a);
