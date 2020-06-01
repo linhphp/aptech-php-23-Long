@@ -49,7 +49,7 @@ function long(){
                 taorow2.appendChild(taodt9);
                 taorow2.appendChild(taodt10);
 
-                for (var i=0 ;i<3; i++) {
+                for (var i=2 ;i<3; i++) {
                     var taorow3 = document.createElement('tr');
                     taobang.appendChild(taorow3);
             
@@ -80,3 +80,21 @@ function long(){
 
 
 } 
+
+var Name = {
+    "users":[
+      Long:{ cannang:" 55kg",
+      chieucao:"1m72",
+      Diachi:"Danang",
+      
+  },
+      Hung:{ cannang: "60kg",
+      chieucao:"1m70",
+      Diachi:"Irac",
+      },
+      Thanh:{ cannang: "63kg",
+      chieucao:"1m68", 
+      Diachi:"Iran",
+      }
+    ]
+  };

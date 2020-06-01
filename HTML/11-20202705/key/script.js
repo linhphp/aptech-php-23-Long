@@ -1,4 +1,5 @@
 var Name = {
+  "users":[
     Long:{ cannang:" 55kg",
     chieucao:"1m72",
     Diachi:"Danang",
@@ -12,6 +13,7 @@ var Name = {
     chieucao:"1m68", 
     Diachi:"Iran",
     }
+  ]
 };
 
 var keys = Object.keys(Name);
