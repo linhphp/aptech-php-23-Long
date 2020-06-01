@@ -1,0 +1,156 @@
+
+.head{
+    display: flex;
+    color: cadetblue;
+}
+.N2{
+    margin-left: 600px;
+    display: flex;
+    text-align: center;
+}
+.N2>ul>a{
+    text-decoration: none;
+    list-style: none;
+    float: left;
+    line-height: 30px; 
+    padding: 0px 10px 0px 10px; 
+}
+.N2>ul>a:hover{
+    text-decoration:underline;
+}
+.Si{
+    background-color:white;
+    color:blue;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    
+    margin: 10px;
+    border: blue solid 1px;
+}
+.Si:hover{background-color: blue;
+    color: white;
+    text-align: center;
+}
+   
+.P2{
+    text-align: center;
+
+   
+}
+.P3{width: 1000px;
+    height: 400px;
+    background-color: none;
+    display: flex;
+    margin: 0 auto;
+
+}
+.quickly{
+
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+}
+.div1{
+    width: 33.33%;
+    background-color: none;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5px 5px 0 0;
+    
+}
+.free{
+    margin-top: 0;
+    background-color: honeydew;
+    height: 50px;
+   border-bottom: 1px solid gray;
+}
+.sign{
+    background-color: white;
+    color: blue;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 0 auto;
+    border: blue solid 1px;
+}
+.sign:hover{
+    color:white;
+    background-color: blue;
+}
+.div2{
+    width: 33.33%;
+    background-color: white;
+    margin: 0 15px;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5px 5px 0 0
+}
+.pro{ margin-top: 0;
+    background-color: honeydew;
+    height: 50px;
+    border-bottom: 1px solid gray;
+
+
+}
+.get{background-color: blue;
+    color: white;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 0 auto;
+    border: blue solid 1px;
+}
+.div3{
+    width: 33.33%;
+    background-color: white;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5px 5px 0 0
+}
+.en{
+    width: 100%;
+    margin-top: 0;
+    background-color: honeydew;
+    height: 50px;
+    border-bottom: 1px solid gray;
+}
+.con{background-color: blue;
+    color:white;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 0 auto;
+    border: blue solid 1px;
+
+}
+.row{
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+}
+.bot{
+    width: 1000px;
+    height: 200px;
+    border-top: 1px solid black;
+    margin: 30px auto;
+    
+}
+.col-3 >ul>a{
+    list-style: none;
+    text-decoration: none;
+    color: cadetblue;
+}
+.C1{
+    margin-top: 40px;
+}
+
+.C2{
+    margin: 40px auto;
+}
+.C3{
+    margin: 40px auto;
+}
+.C4{
+    margin: 40px auto;
+}
