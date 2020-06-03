@@ -58,6 +58,15 @@ function kick(){
         taotd2.innerHTML = data.users[i].update;
         taorow.appendChild(taotd2);
 
+        var taotd = document.createElement("button");
+        taorow.appendChild(taotd);
+        taotd.innerHTML = "Show";
+        
+        var taotd = document.createElement("button");
+        taorow.appendChild(taotd);
+        taotd.innerHTML = "Edit";
+
+
         taotb.appendChild(taorow);
         
     }
