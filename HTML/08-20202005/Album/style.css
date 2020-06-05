@@ -1,59 +1,71 @@
-.head{
+
+.col-6{
+    margin:auto;
     display: flex;
-    color: cadetblue;
-    height: 50px;
-    background-color: dimgrey;
+   
 }
-.N2{
-    margin-left: 900px;
-    display: flex;
+.col-12{
+    margin: auto;
     text-align: center;
 }
-
-.MS{
-    
-    width: 1000px;
-    margin-left: 200px;
+.row{
+    display: flex;
 }
-.M{
+.bt1{
+    width: 200px;
+    height: 40px;
     background-color: blue;
-    height: 40px;
-    border-radius: 7px;
     color: white;
+    border-radius: 5px;
 }
-.S{
-    background-color: teal;
+.bt2{
+    width: 200px;
     height: 40px;
+    background-color: grey;
     color: white;
-    border-radius: 7px;
+    border-radius: 5px;
 }
+.div3{
+    border: rgb(201, 194, 194) 1px solid;
+    margin: 5px 30px;
+    border-radius: 5px;
 
-.P2{
-    text-align: center;
 }
-.container{
-    background-color: hotpink;
-    width: 1000px;
-    height: 800px;
+.div3>p{
+    text-align: left;
+    margin-left: 15px;
 }
-.Hop1{
-    height: 300px;
-    background-color: khaki;
+.thum{
+    width: 100%;
+    height: 250px;
+    background-color: grey;
+    color: white;
+    border: rgb(201, 194, 194) 1px solid;
 }
-.Hop2{
-    background-color: lawngreen;
-    height: 300px;
+.VE{
+    margin: 0 15px 5px 15px;
+    display: flex;
 }
-.Hop3{
-    background-color: lightsalmon;
-    height: 200px;
+.v{
+    width: 50px;
+    height: 30px;
+    border-radius: 3px 0 0 3px;
 }
-.M1{
-    width: 33.33%;
-    background-color: lightskyblue;
-    height: 50px;
+.v:hover{
+    background-color: grey;
+    color: white;
 }
-.M2{
-    width: 33.33%;
-    background-color: lime;
+.e{
+    width: 50px;
+    height: 30px;
+    border-radius: 0px 5px 5px 0px;
+}
+.e:hover{
+    background-color: grey;
+    color: white;
+}
+.min{
+    float: right;
+    color: teal;
+   margin-left: 200px;
 }
