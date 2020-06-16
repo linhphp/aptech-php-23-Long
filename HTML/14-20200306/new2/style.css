@@ -22,6 +22,9 @@
     float: right;
     color: green;
 }
+ol{
+    list-style: none;
+}
 .L{
     display: flex;
     float: right;
@@ -52,7 +55,8 @@ ul{
     color: white;
     text-align:left;
     background-size: cover;
-    background-position: center;  
+    background-position: center;
+    padding-right: 5px;
 }
 
 .div1>p{
@@ -68,12 +72,14 @@ ul{
     text-align: left;
     background-size: cover;
     background-position: center; 
+    padding-left:  0px;
 }
 .div2>p{
     margin: 150px 10px 10px 10px;
     font-size: small;
 }
 .div3{
+    width: 100%;
     background-color: whitesmoke;
     height: 50px;
     text-align: left;
@@ -84,6 +90,7 @@ ul{
     margin: 10px 5px;
 }
 .div4{
+    width: 100%;
     height: 50px;
     text-align: left;
     border: gray 1px solid;
@@ -140,4 +147,9 @@ button>p{
 .col-3>p>a{
     color: gray;
     text-decoration:none;
+}
+@media screen{max-width: 678px;
+.col-4{
+    width: 50%;
+}
 }

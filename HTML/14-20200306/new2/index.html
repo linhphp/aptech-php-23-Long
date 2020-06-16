@@ -9,29 +9,49 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
+    
+    <script>
+      $(document).ready(function(){
+          $("#sign2").click(function(){
+              $("#div55").slideToggle();
+          });
+      });
+     
+    </script>
 </head>
 
 <body>
     <div class="container text-center">
         <div class="row mt-5">
-            <div class="col-3">
+            <div class="col-3 d-none d-sm-flex">
                 <button class="sign">SIGN UP NOW</button>
             </div>
-            <div class="col-6">
+            <div class="col-6 ">
                 <h1>NEWS</h1>
             </div>
-            <div class="col-3">
+            <div class="col-3 ">
                 <div class="L">
                     <i class="fas fa-search" style="margin: 25px 15px" ></i>
-                <button class="sign2">SIGN IN</button>
+                <button id="sign2" class="sign2" >SIGN IN
+                 </button>
                 </div>
                 
             </div>
         </div>
         <br>
-
-        <ul>
+        <div class="row">
+            <div id="div55">
+                <a href="">Home</a> 
+                <a href="">HTML</a> 
+                <a href="">CSS</a> 
+                <a href="">JavaScript</a> 
+                <a href="">PHP</a> 
+                <a href="">React JS</a>
+                <a href="">Laravel</a> 
+            </div>
+              
+        </div>
+        <ul class="UL d-none d-sm-flex"  >
            <a href=""><i class="fas fa-chevron-left" style="color: grey;"></i></a> 
             <li> <a href="">Home</a> </li>
             <li><a href="">HTML</a> </li>
@@ -44,7 +64,7 @@
         </ul>
         <hr>
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 d-none d-sm-flex" >
                 <div class="div1">
                     <h5>Card title</h5>
                     <p>This is a wider card with
@@ -53,7 +73,7 @@
                 </div>
             </div>
 
-            <div class="col-4 text-left">
+            <div class="col-4 ">
                 <div class="div2">
                     <h5>Card title</h5>
                     <p>This is a wider card with
@@ -62,14 +82,14 @@
                 </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 ">
                 <div class="div3">
                     <h5>Hot News</h5>
                 </div>
                 <div class="div4">
                     <p>Lorem ipsum dolor sit amet consectetur a..
-                    <i class='fab fa-node-js' style='font-size: 25px;color:green;margin-left: 7px;'></i>
-                    </p>
+                    <i class='fab fa-node-js' style='font-size: 25px;color:green;margin-left: 7px;'></i> 
+                    
                 </div>
                 <div class="div4">
                     <P>A expedita, fuga! Ab qtque facilis, itaauqe !...
@@ -145,7 +165,7 @@
                     <button class="bt"><p>Last updated 3 mins ago</p></button>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-4 d-none d-sm-flex ">
                 <div class="div5">
                     <img src="anh2.jpg" width="100%" height="315" alt="">
                     <br><br>
@@ -167,13 +187,13 @@
             <div class="col-6">
                 <div class="more">
                     <h5>MORE</h5>
-                   <i class="fas fa-chevron-right"></i>
+                    <i class="fas fa-chevron-right" style="color: grey;margin: 5px 15px;"></i>
                 </div>
             </div>
             
         </div><br>
         <div class="row text-left">
-            <div class="col-4">
+            <div class="col-4 d-none d-sm-flex">
                 <div class="div5">
                     <img src="anh2.jpg" width="100%" height="315" alt="">
                     <br><br>
