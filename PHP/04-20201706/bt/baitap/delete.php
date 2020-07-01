@@ -10,5 +10,5 @@
  if (!$conn) {
  die("Đăng nhập thành công: " . mysqli_connect_error());
  }
- $sql = "delete from $table.users where name='$name'";
+ //$sql = "delete from $table.users where name='$name'";
 ?>

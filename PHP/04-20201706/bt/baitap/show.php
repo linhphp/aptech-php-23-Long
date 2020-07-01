@@ -13,9 +13,9 @@
     $password = "";
     $table = "Aptech_PHP23";
 
-    // Create connection
+    
     $conn = mysqli_connect($servername, $username, $password, $table);
-    // Check connection
+    
     if (!$conn) {
     die("Đăng nhập thành công: " . mysqli_connect_error());
     }
@@ -65,7 +65,7 @@
                               
                         ?>
                         <tr>
-                            <th></th>
+                            <th><?php echo $row['id']?></th>
                             <th><?php echo $row['name']?></th>
                             <th><?php echo $row['email']?></th>
                             <th><?php echo $row['password']?></th>

@@ -13,17 +13,28 @@
     $password = "";
     $table = "Aptech_PHP23";
 
-    // Create connection
+    $name = $_POST['name'];
+    $email = $_POST['Email'];
+    $pass = $_POST['password'];
+    
     $conn = mysqli_connect($servername, $username, $password, $table);
-    // Check connection
+    
     if (!$conn) {
     die("Đăng nhập thành công: " . mysqli_connect_error());
     }
 
+    /*$sql = "INSERT INTO $table.users(name, email, password)
+    VALUES ('$name', '$email', '$pass')";
+
+    if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+    } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    }*/
+
     $sql = "select *from $table.users";
 
     $result = mysqli_query($conn,$sql);
-    
     ?>
 <html>    
 <body>
@@ -63,8 +74,8 @@
                               
                         ?>
                         <tr>
-                            <th></th>
-                            <th><?php echo $row['name']?></th>
+                            <th><?php echo $row['id']?></th>
+                           <th><?php echo $row['name']?></th>
                             <th><?php echo $row['email']?></th>
                             
                             <th class="tong d-flex">
@@ -101,4 +112,4 @@
     
      
 </body>
-</html>     
+</html>
