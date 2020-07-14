@@ -15,4 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/ac','create_UserController@index');
+Route::get('/users','UserController@index')->name('trang-chu');
+
+Route::get('/users/create','UserController@create');
+
+Route::get('/users/{user}','UserController@show');
+Route::delete('/users/{id}','UserController@destroy');
+Route::post('/users','UserController@store');
+Route::get('/users/{user}/edit','UserController@edit');
+Route::put('/users/{user}','UserController@update');
+
+
