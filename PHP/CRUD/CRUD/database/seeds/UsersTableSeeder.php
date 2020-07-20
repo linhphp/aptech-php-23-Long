@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
         for($i=0;$i<5;$i++){
             DB::table('users')->insert([
                 'name'=>$faker->name(),
-                'email'=>$faker->safeEmail,
+                'email'=>$faker->safeEmail(),
                 'password'=>bcrypt('12345')
             ]);
         }

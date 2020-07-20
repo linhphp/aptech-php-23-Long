@@ -14,7 +14,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::paginate(10);
         return view('articles.index',[
             'articles'=>$articles
         ]);
@@ -74,10 +74,10 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        $user = User::find($id);
-        return view('users.edit',
+        $article = Article::find($id);
+        return view('articles.edit',
         [
-            'user'=>$user
+            'article'=>$article
         ]);
     }
 

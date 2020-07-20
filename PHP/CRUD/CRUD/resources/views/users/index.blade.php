@@ -3,6 +3,7 @@
 @component('layout.components.title')
 index page
 @endcomponent
+
 <div class="container mt-3">
   <div class="row">
     <div class="col-12">
@@ -16,6 +17,7 @@ index page
           </tr>
         </thead>
         <tbody>
+        
           @foreach($users as $user)
           <tr class="text-center">
             <th scope="row">{{$user->id}}</th>

@@ -17,7 +17,7 @@ class ArticleController extends Controller
     {   
         $articles = Article::all();
         return view('articles.index',[
-            'articles'=>$articles
+            'articles'=>$articles,
         ]);
     }
 
@@ -44,6 +44,7 @@ class ArticleController extends Controller
         $slug = Str::slug($title,'-');
         $description = $request ->description;
         $content = $request ->content;
+    
         Article::create([
             'title'=>$title,
             'slug'=>$slug,
