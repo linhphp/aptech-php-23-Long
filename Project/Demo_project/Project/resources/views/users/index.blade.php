@@ -1,8 +1,5 @@
 @extends('layout.master')
 @section('content')
-@component('layout.components.title')
-index page
-@endcomponent
 
 <div class="col-xs-4 col-md-4 mx-auto">
           @if($errors->any())

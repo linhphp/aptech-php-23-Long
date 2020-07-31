@@ -53,13 +53,13 @@ class UserController extends Controller
         're_password'=>'required|same:password'
         ],
         [
-           'email.required'=>'nhap email',
-           'email.email'=>'khong dung cu phap email',
-           'email.unique'=>'email da duoc su dung',
-           'password.required'=>'nhap dung mat khau',
-           'password.min'=>'do dai tu 6 den 20 ky tu',
-           're_password.required'=>'nhap mat khau',
-           're_password.same'=>'mat khau khong giong nhau,nhap lai', 
+           'email.required'=>'Chưa nhập Email',
+           'email.email'=>'Email không đúng cú pháp',
+           'email.unique'=>'Email đã được sử dụng',
+           'password.required'=>'Nhập mật khẩu',
+           'password.min'=>'Độ dài từ 6 đến 20 ký tự',
+           're_password.required'=>'Nhập lại mật khẩu không chính xác',
+           're_password.same'=>'Mật khẩu không giống nhau', 
         ]);
         
         $user = new User();
@@ -87,7 +87,7 @@ class UserController extends Controller
         $user->password=Hash::make($request->password);
         
         $user->save();
-        return redirect()->back()->with('thongbao','Tao tai khoan thanh cong');
+        return redirect()->back()->with('thongbao','Tạo tài khoản thành công');
     }
 
     /**
@@ -146,10 +146,10 @@ class UserController extends Controller
             'email'=>'required',
             'password'=>'required|min:3|max:32'
         ],[
-            'email.required'=>'ban chua nhap email',
-            'password.required'=>'ban chua nhap password',
-            'password.min'=>'password khong duoc nho hon 3',
-            'password.max'=>'password khong duoc lon hon 32'
+            'email.required'=>'Bạn chưa nhập Email',
+            'password.required'=>'Bạn chưa nhập Password',
+            'password.min'=>'Password không được nhỏ hơn 3',
+            'password.max'=>'Password không được lớn hơn 32'
         ]);
         // $arr= [
         //     'email'=>$request->email,
@@ -160,11 +160,11 @@ class UserController extends Controller
             'password'=>$request->password
             ]))
         {
-            return redirect('users')->with('thongbao','Dang nhap thanh cong');
+            return redirect('users')->with('thongbao','Đăng nhập thành công');
         }
         else
         {
-            return redirect()->back()->with('thongbao','Dia chi email hoac mat khau khong dung');
+            return redirect()->back()->with('thongbao','Địa chỉ Email hoặc mật khẩu không đúng');
         }
     }
 }

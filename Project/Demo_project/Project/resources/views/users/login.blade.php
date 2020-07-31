@@ -1,4 +1,6 @@
 @extends('layout.master')
+
+@section('content')
 <div class="container mx-5">
     <div class="row">
   
@@ -37,3 +39,4 @@
        
     </div>
 </div>
+@endsection
