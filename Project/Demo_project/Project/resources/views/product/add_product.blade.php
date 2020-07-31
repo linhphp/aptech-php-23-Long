@@ -20,10 +20,10 @@
             Thêm danh mục sản phẩm
             </header>
             <?php
-              $message = Session::get('message');
+              $message = Session::get('thongbao');
               if($message){
                   echo '<span class="text-alert">'.$message.'</span>';
-                  session::put('message',null);
+                  session::put('thongbao',null);
               }  
             ?>
                 <div class="col-xs-4 col-md-4 mx-auto">

@@ -25,3 +25,7 @@ Route::delete('users/{id}','UserController@destroy')->name('users.destroy');
 Route::get('/add-product','ProductController@add_product');
 Route::get('/all-product','ProductController@all_product');
 Route::post('/save-product','ProductController@save_product');
+
+//address
+Route::get('/address','ProductController@tinhthanh');
+Route::get('/address/{idmatp}','ProductController@gettinhthanh');

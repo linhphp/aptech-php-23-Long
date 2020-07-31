@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
-
+use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\pagination\Environment;
@@ -15,32 +14,66 @@ use App\Http\Requests;
 
 class ProductController extends Controller
 {   
-   public function add_product()
-   {
+  public function add_product()
+  {
      return view('product.add_product');
-   }
-   
-   public function all_product()
-   {
-     return view('product.all_product');
-   }
+  }
+  
 
-   public function save_product(Request $request)
-   {
+  public function all_product()
+  {
+      $products = DB::table('product')->get();
+
+      return view('product.all_product',[
+        'product'=>$products
+      ]);
+  }
+
+  public function save_product(Request $request)
+  {
         $data =array();
         $data['product_name']= $request->product_name;
         $data['product_price']= $request->product_price;
         // $data['product_image']= $request->product_image;
+      
 
         // echo '<pre>';
         // print_r($data);
         // echo '</pre>';
         DB::table('product')->insert($data);
-        Session::put('message','Thêm danh mục sản phẩm thành công');
+        Session::put('thongbao','Thêm danh mục sản phẩm thành công');
         return redirect::to('add-product');
+
    }
 
+   public function address()
+   {
+     return view('users.address');
+   }
 
+   public function tinhthanh()
+   {
+     $thanhpho = DB::table('devvn_tinhthanhpho')->get();
+     $quanhuyen = DB::table('devvn_quanhuyen')->get();
+     $xaphuong = DB::table('devvn_xaphuongthitran')->get();
+
+     return view('users.address',[
+       'thanhpho'=>$thanhpho,
+       'quanhuyen'=>$quanhuyen,
+       'xaphuong'=>$xaphuong
+     ]);
+   }
+  //  public function gettinhthanh($idmatp)
+  //  {
+  //     $maqh = DB::table('devvn_tinhthanhpho')::where('idmatp',$idmatp)->get();
+  //     foreach($maqh as $qh)
+  //     {
+  //       echo "<option value='".$qh->maqh."'>".$qh->name."</option>"; 
+  //     }
+  //  }
+
+
+   
 
     // public function createProduct()
     // {

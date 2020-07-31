@@ -35,6 +35,7 @@
   @section('content') @show
   <hr>
   @include('layout.footer')
+  @yield('script')
 <!-- <style>
 .container{
   background-image:url("/image/hinh1.jpg");
