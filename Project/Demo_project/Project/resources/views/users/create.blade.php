@@ -1,8 +1,16 @@
-@extends('layout.master')
-@section('content')
-@component('layout.components.title')
-create page
-@endcomponent
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Users</title>
+  <link rel="stylesheet" href="{{asset('/bootstrap.css')}}">
+</head>
+<body>
+  
+</body>
+</html>
+
 @if(count($errors)>0)
 
   @foreach($errors->all() as $err)
@@ -18,6 +26,12 @@ create page
 
 @endif   
 <div class="container mt-3">
+  <div class="div">
+    <a href="{{route('users.index')}}">Home</a> 
+  </div>
+  <header class="col-xs-4 col-md-4 mx-auto text-primary">       
+    Đăng ký tài khoản         
+  </header>
   <div class="d-flex flex-row">
     <div class="col-12 px-0">
       <form action="{{route('users.store')}}" method="post" enctype="multipart/form-data" >
@@ -46,13 +60,12 @@ create page
           <label class="text-uppercase font-weight-bold" for="name">Anhdaidien</label>
           <input type="file" class="form-control rounded-0" id="name" placeholder="Anhdaidien" name="Anhdaidien">
         </div> -->
-        <div class="form-group ">
+        <div class="form-group">
           <button type="submit" class="btn btn-danger text-uppercase rounded-0 font-weight-bold">
             dang ky
-          </button>
-        </div>
-      </form>
+          </button> 
+        </div>  
+      </form>  
     </div>
   </div>
 </div>
-@endsection

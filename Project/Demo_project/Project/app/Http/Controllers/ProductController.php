@@ -16,7 +16,7 @@ class ProductController extends Controller
 {   
   public function add_product()
   {
-     return view('product.add_product');
+     return view('products.add_product');
   }
   
 
@@ -24,8 +24,8 @@ class ProductController extends Controller
   {
       $products = DB::table('product')->get();
 
-      return view('product.all_product',[
-        'product'=>$products
+      return view('products.all_product',[
+        'products'=>$products
       ]);
   }
 

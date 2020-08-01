@@ -1,5 +1,4 @@
-@extends('layout.master')
-@section('content')
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,7 +54,7 @@
 
     </div>
 </div>
-@endsection
+
 @section('script')
     <script>
     $(document).ready(function(){

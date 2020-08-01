@@ -1,4 +1,15 @@
-@extends('layout.master')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Products</title>
+    <link rel="stylesheet" href="{{asset('/bootstrap.css')}}">
+</head>
+<body>
+    
+</body>
+</html>
 
 <!-- @if(count($errors)>0)
 
@@ -16,9 +27,14 @@
 <div class="row">
     <div class="col-lg-12">
         <section class="panel mt-3">
+       <a href="{{route('users.index')}}">Back</a>
+     
             <header class="col-xs-4 col-md-4 mx-auto text-primary">
+            
             Thêm danh mục sản phẩm
+            
             </header>
+            
             <?php
               $message = Session::get('thongbao');
               if($message){

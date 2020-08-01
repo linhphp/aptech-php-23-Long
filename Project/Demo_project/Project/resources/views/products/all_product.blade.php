@@ -12,10 +12,14 @@
           </tr>
         </thead>
         <tbody>
-        @foreach($products as $product)
+          @foreach($products as $product)
+          <tr>
+            <td>{{$product->product_id}}</td>
             <td>{{$product->product_name}}</td>
-            <td></td>
-        @endforeach    
+            <td>{{$product->product_price}}</td>
+          </tr>
+          @endforeach          
         </tbody>
 </table> 
-@endsection          
+@endsection
+       

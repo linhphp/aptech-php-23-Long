@@ -28,6 +28,7 @@
           <tr>
             <td scope="row">{{$user->id}}</td>
             <td>{{$user->nickname}}</td>
+            
             <td>
               <form action="{{route('users.destroy',$user->id)}}" method="post">
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
