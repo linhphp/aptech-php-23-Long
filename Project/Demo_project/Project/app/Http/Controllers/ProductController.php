@@ -16,6 +16,7 @@ class ProductController extends Controller
 {   
   public function add_product()
   {
+     $add_product=DB::table('product')->get(); 
      return view('products.add_product');
   }
   
@@ -34,12 +35,23 @@ class ProductController extends Controller
         $data =array();
         $data['product_name']= $request->product_name;
         $data['product_price']= $request->product_price;
-        // $data['product_image']= $request->product_image;
-      
+        $data['product_image']= $request->product_image;
+        $get_image = $request->file('product_image');
 
-        // echo '<pre>';
-        // print_r($data);
-        // echo '</pre>';
+        if($get_image){
+          $get_image_name = $get_image->getClientOriginalName();
+          $name_image = current(explode('.',$get_image_name));
+          $new_image = $name_image.rand(0,99).'.'.$get_image->getClientOriginalExtension();
+          $get_image -> move('public/image',$new_image);
+          $data['product_image'] = $new_image;
+
+          DB::table('product')->insert($data);
+          Session::put('thongbao','Thêm danh mục sản phẩm thành công');
+          return Redirect::to('add-product');      
+        }
+       
+        $data['product_image'] == '';
+       
         DB::table('product')->insert($data);
         Session::put('thongbao','Thêm danh mục sản phẩm thành công');
         return redirect::to('add-product');

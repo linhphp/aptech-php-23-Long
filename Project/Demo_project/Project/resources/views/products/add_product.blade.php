@@ -31,7 +31,7 @@
      
             <header class="col-xs-4 col-md-4 mx-auto text-primary">
             
-            Thêm danh mục sản phẩm
+            Thêm sản phẩm
             
             </header>
             
@@ -53,10 +53,10 @@
                             <label for="">Giá sản phẩm</label>
                             <input type="text"class="form-control" placeholder="Giá sản phẩm" name="product_price" > 
                         </div>
-                        <!-- <div class="div">  
+                        <div class="div">  
                             <label for="name">Hình ảnh sản phẩm</label>
                             <input type="file" class="form-control rounded-0" id="name" placeholder="Hình ảnh sản phẩm" name="product_image" >
-                        </div> -->
+                        </div>
                         <button type="submit" name="add_product" class="btn-primary mt-3">Thêm sản phẩm</button>
                 </div>
         </section>        

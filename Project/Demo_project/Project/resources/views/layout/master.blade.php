@@ -24,8 +24,8 @@
         <span>Danh mục sản phẩm </span>
       </li>
         <ul class="sub">
-          <li><a href="{{URL::to('/add-product')}}">Thêm danh mục sản phẩm</a> </li>
-          <li><a href="{{URL::to('/all-product')}}">Liệt kê mục sản phẩm</a> </li>
+          <li><a href="{{URL::to('/add-product')}}">Thêm sản phẩm</a> </li>
+          <li><a href="{{URL::to('/all-product')}}">Liệt kê sản phẩm</a> </li>
         </ul>
     </ul>
 
