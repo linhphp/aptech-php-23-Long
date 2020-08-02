@@ -12,7 +12,6 @@ use Illuminate\Auth\Authenticatable as AuthenticableTrait;
 
 class Product extends Model 
 {
-    // use SoftDeletes;
-    // use AuthenticableTrait;
+    protected $table="Product";
    
 }

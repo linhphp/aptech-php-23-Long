@@ -10,17 +10,19 @@
             <th scope="col" class="">Tên sản phẩm</th>
             <th scope="col" class="">Hình ảnh sản phẩm</th>
             <th scope="col" class="">Giá sản phẩm</th>
-            
+            <th scope="col" class="">Mô tả sản phẩm</th>
+            <th scope="col" class="">Số lượng sản phẩm</th>    
           </tr>
         </thead>
         <tbody>
           @foreach($products as $product)
-          <tr>
-            <td>{{$product->product_id}}</td>
+          <tr class="text-center">
+            <td>{{$product->id}}</td>
             <td>{{$product->product_name}}</td>    
             <td><img src="public/image/{{$product->product_image}}"height="100" width="100"></td>
             <td>{{$product->product_price}}</td>
-            
+            <td>{{$product->product_desc}}</td>
+            <td>{{$product->product_unit}}</td>    
           </tr>
           @endforeach          
         </tbody>

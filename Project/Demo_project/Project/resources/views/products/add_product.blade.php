@@ -53,6 +53,14 @@
                             <label for="">Giá sản phẩm</label>
                             <input type="text"class="form-control" placeholder="Giá sản phẩm" name="product_price" > 
                         </div>
+                        <div class="div">
+                            <label for="">Số lượng sản phẩm</label>
+                            <input type="text"class="form-control" placeholder="Số lượng sản phẩm" name="product_unit" > 
+                        </div>
+                        <div class="div">
+                            <label for="">Mô tả sản phẩm</label>
+                            <textarea style="resize:none" class="form-control" placeholder="Mô tả sản phẩm" name="product_desc" ></textarea> 
+                        </div>
                         <div class="div">  
                             <label for="name">Hình ảnh sản phẩm</label>
                             <input type="file" class="form-control rounded-0" id="name" placeholder="Hình ảnh sản phẩm" name="product_image" >
