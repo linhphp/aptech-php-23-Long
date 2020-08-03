@@ -22,7 +22,8 @@
             <td><img src="public/image/{{$product->product_image}}"height="100" width="100"></td>
             <td>{{$product->product_price}}</td>
             <td>{{$product->product_desc}}</td>
-            <td>{{$product->product_unit}}</td>    
+            <td>{{$product->product_unit}}</td>
+                
           </tr>
           @endforeach          
         </tbody>

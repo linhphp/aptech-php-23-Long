@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Product;
+use App\category_product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\pagination\Environment;
@@ -13,14 +14,16 @@ use App\Http\Requests;
 
 
 class ProductController extends Controller
-{   
+{  
+  
+  //Thêm sản phẩm
   public function add_product()
   {
      $add_product=DB::table('product')->get(); 
      return view('products.add_product');
   }
   
-
+  //Hiển thị tất cả sản phẩm
   public function all_product()
   {
       $products = DB::table('product')->get();
@@ -30,6 +33,8 @@ class ProductController extends Controller
       ]);
   }
 
+  
+  //Lưu sản phẩm
   public function save_product(Request $request)
   {
         $data =array();
@@ -59,7 +64,47 @@ class ProductController extends Controller
         return redirect::to('add-product');
 
    }
+  //Thêm danh mục sản phẩm
+  public function add_category_product()
+  {
+      $add_categorys = category_product::all();
+      return view('products.add_category_product',
+      compact('add_categorys')
+    );
+  }
+  
+  //Hiển thị danh mục
+  public function all_category_product()
+  {
+    $categorys = category_product::all();
 
+      return view('products.all_category_product',[
+        'categorys'=>$categorys
+      ]);
+  }
+
+
+  //Lưu danh mục sản phẩm
+  public function save_category_product(Request $request)
+  {
+    $data = New category_product();
+    $data->cate_name=$request->category_product;
+    $data->save();
+    return view('products.all_category_product');
+  }
+
+
+  //Xóa danh mục sản phẩm
+  // public function delete_category($id)
+  // {
+  //     category_product::where('id',$id)->delete();
+ 
+  // }
+
+
+
+
+   //Địa chỉ hành chính việt nam
    public function address()
    {
      return view('users.address');
