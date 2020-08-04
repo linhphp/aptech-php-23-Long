@@ -27,10 +27,10 @@ Route::get('/all-product','ProductController@all_product');
 Route::post('/save-product','ProductController@save_product');
 
 //category_product
-Route::get('/add-category-product','ProductController@add_category_product');
-Route::get('/all-category-product','ProductController@all_category_product');
-Route::post('/save-category-product','ProductController@save_category_product')->name('save_category_product');
-// Route::delete('all-category-product/{id}','ProductController@destdelete_category')->name('all_category_product.delete_category');
+Route::get('/add-category','ProductController@add_category');
+Route::get('/all-category','ProductController@all_category');
+Route::post('/save-category','ProductController@save_category')->name('save_category');
+Route::delete('all-category/{id}','ProductController@delete_category')->name('all_category.delete');
 
 
 //address

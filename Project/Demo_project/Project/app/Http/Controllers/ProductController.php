@@ -65,41 +65,44 @@ class ProductController extends Controller
 
    }
   //Thêm danh mục sản phẩm
-  public function add_category_product()
+  public function add_category()
   {
       $add_categorys = category_product::all();
-      return view('products.add_category_product',
+      return view('products.add_category',
       compact('add_categorys')
     );
   }
   
   //Hiển thị danh mục
-  public function all_category_product()
+  public function all_category()
   {
     $categorys = category_product::all();
 
-      return view('products.all_category_product',[
+      return view('products.all_category',[
         'categorys'=>$categorys
       ]);
   }
 
 
   //Lưu danh mục sản phẩm
-  public function save_category_product(Request $request)
+  public function save_category(Request $request)
   {
     $data = New category_product();
     $data->cate_name=$request->category_product;
     $data->save();
-    return view('products.all_category_product');
+    return view('products.all_category');
   }
 
 
   //Xóa danh mục sản phẩm
-  // public function delete_category($id)
-  // {
-  //     category_product::where('id',$id)->delete();
- 
-  // }
+  public function delete_category($id)
+  { 
+       
+      $categorys = category_product::find($id);
+      $categorys->delete();
+      // return view('products.all_category',compact('categorys'));
+      return Redirect::to('all-category'); 
+  }
 
 
 

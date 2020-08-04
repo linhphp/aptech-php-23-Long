@@ -30,7 +30,7 @@
               }  
             ?>
                 <div class="col-xs-4 col-md-4 mx-auto">
-                    <form action="{{route('save_category_product')}}" method="post" enctype="multipart/form-data" >
+                    <form action="{{route('save_category')}}" method="post" enctype="multipart/form-data" >
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="div mt-3">
                             <label for="">Tên danh mục sản phẩm</label>
