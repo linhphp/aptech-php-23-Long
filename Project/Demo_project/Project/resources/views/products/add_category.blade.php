@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Products</title>
+    <title>Thêm danh mục</title>
     <link rel="stylesheet" href="{{asset('/bootstrap.css')}}">
 </head>
 <body>
@@ -37,7 +37,7 @@
                             <textarea type="text"class="form-control" name="category_product"placeholder="Tên danh mục sản phẩm" ></textarea> 
                         </div>
                 
-                        <button type="submit" name="add_product" class="btn-primary mt-3">Thêm danh mục</button>
+                        <button type="submit" name="add_category" class="btn-primary mt-3">Thêm danh mục</button>
                     </form>
                 </div>
         </section>        

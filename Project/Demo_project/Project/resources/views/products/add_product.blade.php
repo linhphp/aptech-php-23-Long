@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Products</title>
+    <title>Thêm sản phẩm</title>
     <link rel="stylesheet" href="{{asset('/bootstrap.css')}}">
 </head>
 <body>
@@ -60,6 +60,13 @@
                         <div class="div">
                             <label for="">Mô tả sản phẩm</label>
                             <textarea style="resize:none" class="form-control" placeholder="Mô tả sản phẩm" name="product_desc" ></textarea> 
+                        </div>
+                        <div class="div">
+                           
+                             <td></td>  
+                            <label for="">Danh mục sản phẩm</label>
+                            <input type="text"class="form-control" placeholder="Chọn danh mục sản phẩm" name="product_cate" >
+                           
                         </div>
                         <div class="div">  
                             <label for="name">Hình ảnh sản phẩm</label>

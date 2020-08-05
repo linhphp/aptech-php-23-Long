@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Đăng nhập</title>
     <link rel="stylesheet" href="{{asset('/bootstrap.css')}}">
 
 </head>
 <body>
-<div class="container mx-5">
+<div class="container mx-5 ">
     <div class="row">
-    <a href="{{route('users.index')}}">Home</a> 
+        <a href="{{route('users.index')}}">Home</a> 
         <div class="col-xs-4 col-md-4 mx-auto">
             <form action="{{route('users.login')}}" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">

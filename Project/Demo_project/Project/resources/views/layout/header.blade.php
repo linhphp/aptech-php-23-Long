@@ -1,5 +1,5 @@
-<div class="container my-3">
-  <div class="d-flex flex-row">
+<div class="header">
+  <div class="d-flex flex-row ">
     <div class="col-12 px-0">
       <div class="d-flex flex-row align-items-center">
         <div class="col-3">
@@ -10,12 +10,12 @@
           </form>
         </div>
         <div class="col-6">
-          <h1 class="text-center font-weight-bold text-uppercase">user project</h1>
+          <h1 class="text-center font-weight-bold text-white ">PHỤ KIỆN CÔNG NGHỆ</h1>
         </div>
-        <div class="col-3">
+        <div class="col-3 text-center mt-3">
             <ul>  
-              <li><a href ="{{URL::to('/login')}}">Dang Nhap</a></li>
-              <li><a href ="">Dang Xuat</a></li>
+              <li><a href ="{{URL::to('/login')}}">Đăng nhập</a></li>
+              <li><a href ="">Đăng xuất</a></li>
             </ul>
         </div>
       </div>

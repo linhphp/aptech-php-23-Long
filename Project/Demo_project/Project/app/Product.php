@@ -13,6 +13,8 @@ use Illuminate\Auth\Authenticatable as AuthenticableTrait;
 class Product extends Model 
 {
     protected $table="Product";
+    protected $primaryKey = "product_cate";
+    
    
    
 }

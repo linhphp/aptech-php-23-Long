@@ -19,7 +19,7 @@ class ProductController extends Controller
   //Thêm sản phẩm
   public function add_product()
   {
-     $add_product=DB::table('product')->get(); 
+     $add_product = category_product::all();
      return view('products.add_product');
   }
   
@@ -42,7 +42,8 @@ class ProductController extends Controller
         $data['product_price']= $request->product_price;
         $data['product_image']= $request->product_image;
         $data['product_unit']= $request->product_unit;
-        $data['product_desc']=$request->product_desc;
+        $data['product_desc']= $request->product_desc;
+        $data['product_cate']= $request->product_cate;
         $get_image = $request->file('product_image');
 
         if($get_image){
@@ -71,6 +72,7 @@ class ProductController extends Controller
       return view('products.add_category',
       compact('add_categorys')
     );
+    
   }
   
   //Hiển thị danh mục
@@ -88,19 +90,16 @@ class ProductController extends Controller
   public function save_category(Request $request)
   {
     $data = New category_product();
-    $data->cate_name=$request->category_product;
+    $data->category_name=$request->category_product;
     $data->save();
-    return view('products.all_category');
+    return Redirect::to('all-category');
   }
 
 
   //Xóa danh mục sản phẩm
   public function delete_category($id)
   { 
-       
-      $categorys = category_product::find($id);
-      $categorys->delete();
-      // return view('products.all_category',compact('categorys'));
+      category_product::where('id',$id)->delete(); 
       return Redirect::to('all-category'); 
   }
 

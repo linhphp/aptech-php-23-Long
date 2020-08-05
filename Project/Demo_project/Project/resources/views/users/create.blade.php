@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create Users</title>
+  <title>Đăng ký tài khoản</title>
   <link rel="stylesheet" href="{{asset('/bootstrap.css')}}">
 </head>
 <body>
@@ -27,7 +27,7 @@
 @endif   
 <div class="container mt-3">
   <div class="div">
-    <a href="{{route('users.index')}}">Home</a> 
+    <a href="{{route('users.index')}}">Quay lại trang chủ</a> 
   </div>
   <header class="col-xs-4 col-md-4 mx-auto text-primary">       
     Đăng ký tài khoản         
@@ -62,7 +62,7 @@
         </div> -->
         <div class="form-group">
           <button type="submit" class="btn btn-danger text-uppercase rounded-0 font-weight-bold">
-            dang ky
+           Đăng ký
           </button> 
         </div>  
       </form>  

@@ -16,7 +16,8 @@ Route::get('/login','UserController@getlogin')->name('users.login');
 Route::post('/login','UserController@postlogin')->name('users.login');
 
 //user
-Route::get('users','UserController@index')->name('users.index');
+Route::get('trangchu','UserController@index')->name('users.index');
+Route::get('users','UserController@users')->name('users.users');
 Route::get('/users/create','UserController@create')->name('users.create');
 Route::post('users','UserController@store')->name('users.store');
 Route::delete('users/{id}','UserController@destroy')->name('users.destroy');

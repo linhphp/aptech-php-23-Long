@@ -9,4 +9,11 @@ class category_product extends Model
 {
     // use SoftDeletes;
     protected $table="category_product";
+    protected $primaryKey ="cate_name";
+    
+
+    public function Product(){
+        return $this->hasMany('App\Model\Product','product_cate');
+    }
+
 }
