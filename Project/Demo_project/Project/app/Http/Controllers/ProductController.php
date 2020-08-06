@@ -15,7 +15,13 @@ use App\Http\Requests;
 
 class ProductController extends Controller
 {  
-  
+  //Hiển thị trang chủ
+  public function hienthitrangchu()
+  {
+    return view('users.hienthi');
+  }
+
+
   //Thêm sản phẩm
   public function add_product()
   {
@@ -65,6 +71,13 @@ class ProductController extends Controller
         return redirect::to('add-product');
 
    }
+  //Xóa sản phẩm
+  public function delete_product()
+  {
+    product::where('id',$id)->delete(); 
+      return Redirect::to('all-product');
+  }
+  
   //Thêm danh mục sản phẩm
   public function add_category()
   {

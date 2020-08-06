@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/hienthi','ProductController@hienthitrangchu');
 
 //login
 Route::get('/login','UserController@getlogin')->name('users.login');
@@ -26,6 +27,7 @@ Route::delete('users/{id}','UserController@destroy')->name('users.destroy');
 Route::get('/add-product','ProductController@add_product');
 Route::get('/all-product','ProductController@all_product');
 Route::post('/save-product','ProductController@save_product');
+Route::delete('all-product/{id}','ProductController@delete_product')->name('all_product.delete');
 
 //category_product
 Route::get('/add-category','ProductController@add_category');

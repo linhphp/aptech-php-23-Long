@@ -19,17 +19,7 @@
 
   @include('layout.header')
  
-  <div class="sidebar">
-    
-    <header>Danh mục sản phẩm </header>
-     
-    <ul class="sub">
-      <li><a href="{{URL::to('/add-category')}}">Thêm danh mục sản phẩm</a></li>
-      <li><a href="{{URL::to('/all-category')}}">Liệt kê danh mục sản phẩm</a></li>
-      <li><a href="{{URL::to('/add-product')}}">Thêm sản phẩm</a></li>
-      <li><a href="{{URL::to('/all-product')}}">Liệt kê sản phẩm</a></li>   
-     </ul>  
-  </div>
+  
   @section('content') @show
   <hr>
   @include('layout.footer')

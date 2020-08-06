@@ -22,7 +22,8 @@
                 <th scope="col" class="">Hình ảnh sản phẩm</th>
                 <th scope="col" class="">Giá sản phẩm</th>
                 <th scope="col" class="">Mô tả sản phẩm</th>
-                <th scope="col" class="">Số lượng sản phẩm</th>    
+                <th scope="col" class="">Số lượng sản phẩm</th>
+                <th scope="col" class="">Sữa/Xóa</th>   
               </tr>
             </thead>
             <tbody>
@@ -35,6 +36,13 @@
                 <td>{{$product->product_price}}</td>
                 <td>{{$product->product_desc}}</td>
                 <td>{{$product->product_unit}}</td>
+                <td>
+                    <form action="{{route('all_product.delete',$product->id)}}" method="post">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+                        <input type="hidden" name="_method" value="delete">
+                        <button>Xoa</button>
+                    </form>
+                </td>
                     
               </tr>
               @endforeach          
