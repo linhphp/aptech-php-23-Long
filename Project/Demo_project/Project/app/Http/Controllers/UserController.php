@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Hash;
@@ -20,10 +21,9 @@ class UserController extends Controller
      */
     public function index()
     {
-       $users = User::all();
-        return view('users.index',[
-            'users'=>$users
-        ]);
+       $products = Product::get();
+        return view('users.index',compact('products')
+        );
     }
     public function users()
     {

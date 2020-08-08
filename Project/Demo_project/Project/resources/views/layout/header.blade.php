@@ -4,13 +4,11 @@
       <div class="d-flex flex-row align-items-center">
         <div class="col-3">
           <form action="{{route('users.index')}}" method="get">
-            <button class="btn btn-primary rounded-0 font-weight-bold">Home</button>
-            
-            
+            <a href="">Trang Chủ</a>  
           </form>
         </div>
         <div class="col-6">
-          <h1 class="text-center font-weight-bold text-white ">PHỤ KIỆN CÔNG NGHỆ</h1>
+          <h1 class="text-center font-weight-bold text-white ">SHOP BÁN HÀNG</h1>
         </div>
         <div class="col-3 text-center mt-3">
             <ul>  
@@ -20,5 +18,6 @@
         </div>
       </div>
     </div>
+    
   </div>
 </div>

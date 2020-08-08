@@ -1,12 +1,18 @@
 body{
-   
-    background: white;
+    margin:0;
+    padding:0;
+    background-size:cover;
+    color:white;
+    background-image:url("/image/bg-image2.jpg");
 }
 .header{
     padding: 0;
     height: 100px;
-    background-color:#042331;
+    background:none;
     margin-top: 0;   
+}
+.footer{
+    background:none;
 }
 ul {
     list-style: none;
@@ -23,7 +29,7 @@ a:hover{
 }
 
 .sidebar{
-    background: #083952;
+    background:none;
     width: 100%;
     height: 100%;
     margin-left:0px;
@@ -35,6 +41,7 @@ a:hover{
  
 }
 .sidebar ul a{
+    color: white;
     display: block;
     text-decoration: none;
     height: 100%;
@@ -47,8 +54,51 @@ a:hover{
 }
 .sidebar ul li a:hover{
     padding-left: 25px;
+    color: blue;
 }
-.col-10{
-    background: #083952;   
+
+.card{
+    background: none;
+    color:white;
 }
+
+.loginbox{
+    position:absolute:
+}
+.loginbox h1{
+    font-size:40px;
+    border-bottom:3px solid #66ff66;
+    padding:10px 0;
+    margin-bottom:50px;
+    color:white;
+}
+.form-group{
+    color:white;
+    border-bottom:1px solid #66ff66;
+    margin:10px 0;
+    padding:10px 0;
+    font-size:20px;
+}
+.form-group input{
+    background:none;
+    border:none;
+    outline:none;
+    color:white;
+    font-size:20px;
+}
+.btn{
+    width: 100%;
+    background:none;
+    font-size:20px;
+    color:white;
+    margin:15px 0;
+    padding:12px 0;
+    text-align:center;
+    border:1px solid #66ff66;
+    cursor: pointer;
+}
+.btn:hover{
+     background:none;   
+}
+
 

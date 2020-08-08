@@ -1,4 +1,4 @@
-<div class="container mb-5">
+<div class="footer mx-3">
   <div class="row">
     <div class="col-12">
       <div class="d-flex justify-content-between align-items-center">

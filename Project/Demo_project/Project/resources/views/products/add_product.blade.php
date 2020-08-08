@@ -62,11 +62,8 @@
                             <textarea style="resize:none" class="form-control" placeholder="Mô tả sản phẩm" name="product_desc" ></textarea> 
                         </div>
                         <div class="div">
-                           
-                             <td></td>  
                             <label for="">Danh mục sản phẩm</label>
-                            <input type="text"class="form-control" placeholder="Chọn danh mục sản phẩm" name="product_cate" >
-                           
+                            <input class="form-control rounded-0"  placeholder="Chọn danh mục" name="product_cate">   
                         </div>
                         <div class="div">  
                             <label for="name">Hình ảnh sản phẩm</label>

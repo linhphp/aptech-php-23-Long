@@ -15,34 +15,38 @@ use App\Http\Requests;
 
 class ProductController extends Controller
 {  
-  //Hiển thị trang chủ
-  public function hienthitrangchu()
-  {
-    return view('users.hienthi');
-  }
-
-
+  
   //Thêm sản phẩm
   public function add_product()
-  {
+  {  
+     
      $add_product = category_product::all();
      return view('products.add_product');
   }
   
+  //Hiển thị chi tiết 1 sản phẩm
+  public function chitietsp(Request $request)
+  {
+    $sanpham = Product::where('id',$request->id)->first();
+    return view('products.chitietsp',compact('sanpham'));
+
+  }
+
   //Hiển thị tất cả sản phẩm
   public function all_product()
-  {
+  {   
+      
+      // $cate = DB::table('category_product')->where('id',$product->product_cate)->first();
       $products = DB::table('product')->get();
-
-      return view('products.all_product',[
-        'products'=>$products
-      ]);
+      
+      return view('products.all_product',compact('products')); 
   }
 
   
   //Lưu sản phẩm
-  public function save_product(Request $request)
+  public function store(Request $request)
   {
+    
         $data =array();
         $data['product_name']= $request->product_name;
         $data['product_price']= $request->product_price;
@@ -51,6 +55,7 @@ class ProductController extends Controller
         $data['product_desc']= $request->product_desc;
         $data['product_cate']= $request->product_cate;
         $get_image = $request->file('product_image');
+        $data->save();
 
         if($get_image){
           $get_image_name = $get_image->getClientOriginalName();
@@ -65,59 +70,31 @@ class ProductController extends Controller
         }
        
         $data['product_image'] == '';
-       
         DB::table('product')->insert($data);
         Session::put('thongbao','Thêm danh mục sản phẩm thành công');
         return redirect::to('add-product');
+        
 
    }
   //Xóa sản phẩm
-  public function delete_product()
+  public function destroy()
   {
     product::where('id',$id)->delete(); 
       return Redirect::to('all-product');
   }
   
-  //Thêm danh mục sản phẩm
-  public function add_category()
-  {
-      $add_categorys = category_product::all();
-      return view('products.add_category',
-      compact('add_categorys')
-    );
-    
-  }
   
-  //Hiển thị danh mục
-  public function all_category()
-  {
-    $categorys = category_product::all();
 
-      return view('products.all_category',[
-        'categorys'=>$categorys
-      ]);
-  }
-
-
-  //Lưu danh mục sản phẩm
-  public function save_category(Request $request)
-  {
-    $data = New category_product();
-    $data->category_name=$request->category_product;
-    $data->save();
-    return Redirect::to('all-category');
-  }
-
-
-  //Xóa danh mục sản phẩm
-  public function delete_category($id)
-  { 
-      category_product::where('id',$id)->delete(); 
-      return Redirect::to('all-category'); 
-  }
-
-
-
+  //Giỏ hàng
+  
+  //  public function save_cart(Request $request)
+  //  {
+  //     $productId = $request->productid_hidden;
+  //     $quantity = $request->qty;
+  //     // $data = Product::where('id',$productId)->get();
+  //     $data = DB::table('product')->where('id',$productId)->get();
+      
+  //  } 
 
    //Địa chỉ hành chính việt nam
    public function address()

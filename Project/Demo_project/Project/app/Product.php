@@ -14,7 +14,10 @@ class Product extends Model
 {
     protected $table="Product";
     protected $primaryKey = "product_cate";
+    protected $guarded =[];
     
-   
+   public function category(){
+       return $this->belongsto('App\category_product','id');
+   }
    
 }
