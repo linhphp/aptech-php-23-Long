@@ -13,6 +13,7 @@
 //Trang chủ
 Route::get('trangchu','UserController@index')->name('users.index');
 
+
 //login
 Route::get('/login','UserController@getlogin')->name('users.login');
 Route::post('/login','UserController@postlogin')->name('users.login');
@@ -39,8 +40,13 @@ Route::delete('all-category/{id}','CategoryController@delete_category')->name('a
 
 //Giỏ hàng
 
-Route::post('/save-cart','ProductController@save_cart');
-Route::get('/add-cart/{id}','CartController@AddCart');
+Route::post('/save-cart','CartController@save_cart');
+Route::get('/show-cart','CartController@show_cart');
+
+//Shopping-cart
+Route::get('cart','CartController@index');
+
+
 
 //address
 Route::get('/address','ProductController@tinhthanh');

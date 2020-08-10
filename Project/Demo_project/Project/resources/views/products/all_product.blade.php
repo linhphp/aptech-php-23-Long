@@ -8,7 +8,7 @@
   </head>
   <body>
         <div class="div mt-5">
-            <a href="{{route('users.index')}}">Home</a> 
+            <a href="{{route('users.index')}}">Trang chủ</a> 
         </div>
       <div class="div">
       Liệt kê sản phẩm

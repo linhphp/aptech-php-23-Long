@@ -25,15 +25,20 @@
                                 <img src="public/image/{{$pro->product_image}}"height="200" width="250">
                             </div>
                              <div class="card-body">
-                                <h4 class="card-title">{{$pro->product_name}}</h4>
+                                <div class="d-flex">
+                                    <h4 class="card-title">{{$pro->product_name}}</h4>
+                            
+                                </div>
+                                <a href="{{URL::to('thongtinsp/'.$pro->id)}}" >Chi tiết sản phẩm</a>
+
                                 <h5 class="card-title">{{$pro->product_price}}</h5>
                                 <p class="card-title">{{$pro->product_desc}}</p>
                                 <label for="">Số lượng</label>
-                                <input name="qty" type="number" min="1" value="1">
-                                <input name="productid_hidden" type="hidden" value="{{$pro->id}}">
-                                <form action="{{URL::to('/add-cart/'.$pro->id)}}">  
-                                    <button type="submit" class="btn btn-primary add-to-cart">Add to cart</button>
-                                </form>  
+                                <input name="quantitys" type="number" min="1" value="1" id="num" name="num">
+                                
+                            
+                                <button type="submit" onclick="addCart({{$pro->id}})" class="btn btn-primary">Mua ngay</button>
+                                 
                             </div>      
                     </div>
                 </form>     
@@ -45,27 +50,12 @@
     </div>
 </div>
 <script>
-    // function addTocart(event){
-    //    event.preventDefault();
-    //    let urlcart = $(this).data('url');
-       
-    //    $.ajax({
-    //        type:"GET",
-    //        url: urlcart,
-    //        dataType: 'json',
-    //        success: function(data) {
+    function addCart(id){
+     num = $("#num").val();
+     $post('addcart.php',{'id':id,'num':num},function(data){
 
-    //        },
-    //        error: function(){
-
-    //        }
-    //    });
-    // }
-
-    // $(function(){
-    //     $('.add-to-cart').on('click',addTocart);
-    // }); 
-
+     }); 
+    }
 
 </script>
 

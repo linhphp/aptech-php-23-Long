@@ -3,9 +3,9 @@
     <div class="col-12 px-0">
       <div class="d-flex flex-row align-items-center">
         <div class="col-3">
-          <form action="{{route('users.index')}}" method="get">
-            <a href="">Trang Chủ</a>  
-          </form>
+        
+            <a href="{{URL::to('trangchu')}}">Trang Chủ</a>  
+      
         </div>
         <div class="col-6">
           <h1 class="text-center font-weight-bold text-white ">SHOP BÁN HÀNG</h1>

@@ -19,7 +19,7 @@ class Cart extends Model
     }
 
     public function Addcart($product,$id){
-        $newProduct = ['quanty'=> 0, 'price'=>$product->price,"productInfo"=>$product];
+        $newProduct = ['quanty'=> 0, 'price'=>$product->price,'productInfo'=>$product];
         if($this->products){
             if(array_key_exists($id,$products)){
 
@@ -27,9 +27,9 @@ class Cart extends Model
             }
         }
         $newProduct['quanty']++;
-        $newProduct['price'] = $newProduct['quanty'] = $product->price;
+        $newProduct['price'] = $newProduct['quanty'] * $product->price;
         $this->products[$id] = $newProduct;
-        $this->totalPrice += $product->price;
+        $this->totalPrice += $newroduct->price;
         $this->totalQuanty ++;
     }
 

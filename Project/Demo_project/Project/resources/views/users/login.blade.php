@@ -12,7 +12,7 @@
 <body>
 <div class="container mx-5 ">
     <div class="row">
-        <a href="{{route('users.index')}}">Home</a> 
+        <a href="{{route('users.index')}}">Trang chủ</a> 
         <div class="col-xs-4 col-md-4 mx-auto">
             <form action="{{route('users.login')}}" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
