@@ -55,7 +55,7 @@ class ProductController extends Controller
         $data['product_desc']= $request->product_desc;
         $data['product_cate']= $request->product_cate;
         $get_image = $request->file('product_image');
-        $data->save();
+        // $data->save();
 
         if($get_image){
           $get_image_name = $get_image->getClientOriginalName();

@@ -8,7 +8,7 @@
     <?php
     $content = Cart::content();
     ?>
-        <table class="table table-condensed text-white">
+        <table class="table table-condensed text-white text-center">
             <thead>
                 <tr class="cart_menu">
                     <th>Hình ảnh</th>
@@ -16,6 +16,7 @@
                     <th>Giá</th>
                     <th>Số lượng</th>
                     <th>Tổng tiền</th>
+                    <th>Thêm/Xóa</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,6 +31,9 @@
                             $subtotal = $v_content->price * $v_content->qty;
                             echo number_format($subtotal).' '.'VNĐ';
                         ?>
+                    </td>
+                    <td>
+                    <a href="{{URL::to('/detele-cart/'.$v_content->rowId)}}">Xóa</a>
                     </td> 
                 </tr>
             @endforeach
@@ -38,10 +42,10 @@
         <div class="col-sm6">
             <div class="total_area float-right">
                 <ul>
-                    <li>Tổng tiền: <span> {{cart::total().' '.'VNĐ'}}</span></li>
+                    <li>Thành tiền:<span> {{cart::subtotal().' '.'VNĐ'}}</span></li>
                     <li>Thuế: <span> {{cart::tax().' '.'VNĐ'}}</span></li>
                     <li>Phí vận chuyển:<span> 5km=Free,10km=5k</span></li>
-                    <li>Thành tiền:<span> {{cart::subtotal().' '.'VNĐ'}}</span></li>
+                    <li>Tổng tiền: <span> {{cart::total().' '.'VNĐ'}}</span></li>
                 </ul>
 
             </div>

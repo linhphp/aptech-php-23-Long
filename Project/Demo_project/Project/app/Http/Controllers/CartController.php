@@ -43,7 +43,11 @@ class CartController extends Controller
         return view('cart.show-cart');
     }
 
-
+    public function destroy($rowId)
+    {
+        cart::remove($rowId);
+        return Redirect::to('/show-cart');   
+    }
 
 }
 

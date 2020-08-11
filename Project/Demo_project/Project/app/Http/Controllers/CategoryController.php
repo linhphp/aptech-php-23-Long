@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-namespace App\Http\Controllers;
 use App\category_product;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\pagination\Environment;
@@ -39,7 +38,7 @@ class CategoryController extends Controller
   public function save_category(Request $request)
   {
     $data = New category_product();
-    $data->category_name=$request->category_product;
+    $data->cate_name=$request->category_product;
     $data->save();
     return Redirect::to('all-category');
   }

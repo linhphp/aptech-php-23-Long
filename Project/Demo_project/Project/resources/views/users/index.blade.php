@@ -32,7 +32,7 @@
                                 </div>
                                 <a href="{{URL::to('thongtinsp/'.$pro->id)}}" >Chi tiết sản phẩm</a>
 
-                                <h5 class="card-title">{{$pro->product_price}}</h5>
+                                <h5 class="card-title">{{$pro->product_price}} VNĐ</h5>
                                 <p class="card-title">{{$pro->product_desc}}</p>
                                 <label for="">Số lượng</label>
                                 <input name="qty" type="number" min="1" value="1"> 

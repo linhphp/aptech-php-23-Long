@@ -42,6 +42,8 @@ Route::delete('all-category/{id}','CategoryController@delete_category')->name('a
 
 Route::post('/save-cart','CartController@save_cart');
 Route::get('/show-cart','CartController@show_cart');
+Route::get('detele-cart/{rowId}','CartController@destroy');
+
 
 //Shopping-cart
 Route::get('cart','CartController@index');
