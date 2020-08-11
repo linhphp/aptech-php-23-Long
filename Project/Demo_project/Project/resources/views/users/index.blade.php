@@ -18,7 +18,8 @@
             <div class="row mt-3">
                 @foreach($products as $pro)
                 <div class="col-md-4">
-                <form action="{{URL::to('/add-cart/'.$pro->id)}}">
+                <form action="{{URL::to('/save-cart')}}" method="post">
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
                     <div class="card " style="width: 18rem;">
                        
                             <div class="d-flex justify-content-around ">
@@ -34,10 +35,11 @@
                                 <h5 class="card-title">{{$pro->product_price}}</h5>
                                 <p class="card-title">{{$pro->product_desc}}</p>
                                 <label for="">Số lượng</label>
-                                <input name="quantitys" type="number" min="1" value="1" id="num" name="num">
+                                <input name="qty" type="number" min="1" value="1"> 
+                                <input name="productid_hidden" type="hidden" value="{{$pro->id}}">
                                 
                             
-                                <button type="submit" onclick="addCart({{$pro->id}})" class="btn btn-primary">Mua ngay</button>
+                                <button type="submit" class="btn btn-primary">Mua ngay</button>
                                  
                             </div>      
                     </div>

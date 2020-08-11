@@ -33,7 +33,7 @@ class CartController extends Controller
         $data['name'] = $product_info->product_name;
         $data['price'] = floatval($product_info->product_price);
         $data['weight'] = '123';
-        $data['option']['image'] = $product_info->product_image;
+        $data['options']['image'] = $product_info->product_image;
         Cart::add($data);
         // dd($data);
         return Redirect::to('/show-cart');
