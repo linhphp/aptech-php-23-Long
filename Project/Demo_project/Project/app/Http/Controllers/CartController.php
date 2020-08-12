@@ -31,7 +31,7 @@ class CartController extends Controller
         $data['id'] = $product_info->id;
         $data['qty'] = $quantity;
         $data['name'] = $product_info->product_name;
-        $data['price'] = floatval($product_info->product_price);
+        $data['price'] = $product_info->product_price;
         $data['weight'] = '123';
         $data['options']['image'] = $product_info->product_image;
         Cart::add($data);
@@ -39,10 +39,22 @@ class CartController extends Controller
         return Redirect::to('/show-cart');
     }
 
-    public function show_cart(){
+    //Hiển thị giỏ hàng
+    public function show_cart()
+    {
         return view('cart.show-cart');
     }
 
+    //Update đơn hàng
+    public function update(Request $request)
+    {
+        $rowId = $request->rowId_cart;
+        $qty = $request->quantity;
+        cart::update($rowId,$qty);
+        return Redirect::to('/show-cart');
+    }
+
+    //Hủy đơn hàng
     public function destroy($rowId)
     {
         cart::remove($rowId);

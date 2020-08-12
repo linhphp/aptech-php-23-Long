@@ -13,9 +13,9 @@
                 <tr class="cart_menu">
                     <th>Hình ảnh</th>
                     <th>Sản phẩm</th>
-                    <th>Giá</th>
+                    <th>Đơn giá</th>
                     <th>Số lượng</th>
-                    <th>Tổng tiền</th>
+                    <th>Thành tiền</th>
                     <th>Thêm/Xóa</th>
                 </tr>
             </thead>
@@ -23,10 +23,20 @@
             @foreach($content as $v_content)
                 <tr>
                     <td><img src="{{URL::to('public/image/'.$v_content->options->image)}}"width="70"></td>    
-                    <td scope="col" class="">{{$v_content->name}}</td>
-                    <td scope="col" class="">{{number_format($v_content->price).' '.'VNĐ'}}</td>
-                    <td scope="col" class="">{{$v_content->qty}}</td>
-                    <td scope="col" class="">
+                    <td scope="col">{{$v_content->name}}</td>
+                    <td scope="col">{{number_format($v_content->price).' '.'VNĐ'}}</td>
+                    
+                    <td scope="col">
+                        <form action="{{URL::to('/update-cart')}}" method="post">
+                        {{csrf_field()}}
+                            <input class="text-center" type="text" value="{{$v_content->qty}}" name="quantity" size="2">
+
+                            <input type="hidden" value="{{$v_content->rowId}}" name="rowId_cart"> 
+
+                            <input type="submit" value="Thay đổi">
+                        </form>
+                    </td>
+                    <td scope="col">
                         <?php
                             $subtotal = $v_content->price * $v_content->qty;
                             echo number_format($subtotal).' '.'VNĐ';
@@ -44,7 +54,7 @@
                 <ul>
                     <li>Thành tiền:<span> {{cart::subtotal().' '.'VNĐ'}}</span></li>
                     <li>Thuế: <span> {{cart::tax().' '.'VNĐ'}}</span></li>
-                    <li>Phí vận chuyển:<span> 5km=Free,10km=5k</span></li>
+                    <li>Phí vận chuyển:<span> Free </span></li>
                     <li>Tổng tiền: <span> {{cart::total().' '.'VNĐ'}}</span></li>
                 </ul>
 
