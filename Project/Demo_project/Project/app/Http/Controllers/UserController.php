@@ -126,7 +126,7 @@ class UserController extends Controller
             'password'=>$request->password
             ]))
         {
-            return redirect('users')->with('thongbao','Đăng nhập thành công');
+            return redirect('show-cart')->with('thongbao','Đăng nhập thành công');
         }
         else
         {

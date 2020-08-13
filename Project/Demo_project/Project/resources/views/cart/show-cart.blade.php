@@ -50,15 +50,20 @@
             </tbody>
         </table>
         <div class="col-sm6">
-            <div class="total_area float-right">
-                <ul>
-                    <li>Thành tiền:<span> {{cart::subtotal().' '.'VNĐ'}}</span></li>
-                    <li>Thuế: <span> {{cart::tax().' '.'VNĐ'}}</span></li>
-                    <li>Phí vận chuyển:<span> Free </span></li>
-                    <li>Tổng tiền: <span> {{cart::total().' '.'VNĐ'}}</span></li>
-                </ul>
-
-            </div>
+            <form action="{{URL::to('/login')}}">
+            
+                <div class="total_area float-right">
+                    <ul>
+                        <li>Thành tiền:<span> {{cart::subtotal().' '.'VNĐ'}}</span></li>
+                        <li>Thuế: <span> {{cart::tax().' '.'VNĐ'}}</span></li>
+                        <li>Phí vận chuyển:<span> Free </span></li>
+                        <li>Tổng tiền: <span> {{cart::total().' '.'VNĐ'}}</span></li>
+                
+                        <button class="btn-sm mt-3" type="submit">Thanh toán</button>
+                    
+                    </ul> 
+                </div>
+            </form>   
         </div>
     </div>
 

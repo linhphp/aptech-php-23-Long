@@ -16,7 +16,7 @@
                 <span>
                     <div class="card-body">
                         <h4 class="card-title">{{$sanpham->product_name}}</h4>
-                        <h5 class="card-title">{{$sanpham->product_price}}</h5>
+                        <h5 class="card-title">{{number_format($sanpham->product_price)}} VNĐ</h5>
                         <p class="card-title">{{$sanpham->product_desc}}</p>
                         <label for="">Số lượng</label>
                         <input name="qty" type="number" min="1" value="1"> 
