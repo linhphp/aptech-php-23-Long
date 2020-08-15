@@ -11,7 +11,12 @@
                     <li><a href="{{URL::to('/all-category')}}">Liệt kê danh mục</a></li>
                     <li><a href="{{URL::to('/add-product')}}">Thêm sản phẩm</a></li>
                     <li><a href="{{URL::to('/all-product')}}">Liệt kê sản phẩm</a></li>   
-                </ul>  
+                </ul>
+                <header>Danh mục tin tức </header> 
+                <ul class="sub">
+                    <li><a href="{{URL::to('/add-loaitin')}}">Thêm thể loại</a></li>
+                    <li><a href="{{URL::to('/list-loaitin')}}">Danh sách thể loại</a></li>
+                </ul>   
             </div>
         </div>    
         <div class="col-10 d-block">

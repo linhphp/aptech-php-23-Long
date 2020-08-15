@@ -126,11 +126,17 @@ class UserController extends Controller
             'password'=>$request->password
             ]))
         {
-            return redirect('show-cart')->with('thongbao','Đăng nhập thành công');
+            return redirect('check-out')->with('thongbao','Đăng nhập thành công');
         }
         else
         {
             return redirect()->back()->with('thongbao','Địa chỉ Email hoặc mật khẩu không đúng');
         }
     }
+
+    public function check_out()
+    {
+        return view('check-out.check-out');
+    }
+
 }

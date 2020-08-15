@@ -13,7 +13,6 @@
 //Trang chủ
 Route::get('trangchu','UserController@index')->name('users.index');
 
-
 //login
 Route::get('/login','UserController@getlogin')->name('users.login');
 Route::post('/login','UserController@postlogin')->name('users.login');
@@ -31,7 +30,6 @@ Route::post('/save-product','ProductController@store');
 Route::delete('all-product/{id}','ProductController@destroy')->name('all_product.delete');
 Route::get('/thongtinsp/{id}','ProductController@chitietsp');
 
-
 //category_product
 Route::get('/add-category','CategoryController@add_category');
 Route::get('/all-category','CategoryController@all_category');
@@ -39,18 +37,23 @@ Route::post('/save-category','CategoryController@save_category')->name('save_cat
 Route::delete('all-category/{id}','CategoryController@delete_category')->name('all_category.delete');
 
 //Giỏ hàng
-
 Route::post('/save-cart','CartController@save_cart');
 Route::get('/show-cart','CartController@show_cart');
 Route::get('detele-cart/{rowId}','CartController@destroy');
 Route::post('/update-cart','CartController@update');
 
-
 //Shopping-cart
 Route::get('cart','CartController@index');
 
-
+//Check-out
+Route::get('check-out','UserController@check_out');
 
 //address
 Route::get('/address','ProductController@tinhthanh');
 Route::get('/address/{idmatp}','ProductController@gettinhthanh');
+
+//Theloai
+Route::get('/add-loaitin','TheloaiController@add_loaitin');
+Route::post('/add-loaitin','TheloaiController@save_loaitin');
+Route::get('/list-loaitin','TheloaiController@all_loaitin');
+Route::delete('detele-loaitin/{id}','TheloaiController@destroy');
