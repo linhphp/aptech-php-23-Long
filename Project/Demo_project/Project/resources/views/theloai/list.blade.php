@@ -29,12 +29,12 @@
                 </tr>
             </thead>
             <tbody>
-            @foreach($loaitin as $lt)
+            @foreach($danhsach as $ds)
             <tr class="text-center">
-                <td scope="row">{{$lt->id}}</td>
-                <td scope="row">{{$lt->name}}</td>
+                <td scope="row">{{$ds->id}}</td>
+                <td scope="row">{{$ds->name}}</td>
                 <td>
-                <form action="{{URL::to('/detele-loaitin',$lt->id)}}" method="post">
+                <form action="{{URL::to('/detele-theloai',$ds->id)}}" method="post">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <input type="hidden" name="_method" value="delete">
                         <button>Xoa</button>

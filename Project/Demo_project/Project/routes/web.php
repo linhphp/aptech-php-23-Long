@@ -53,7 +53,12 @@ Route::get('/address','ProductController@tinhthanh');
 Route::get('/address/{idmatp}','ProductController@gettinhthanh');
 
 //Theloai
-Route::get('/add-loaitin','TheloaiController@add_loaitin');
-Route::post('/add-loaitin','TheloaiController@save_loaitin');
-Route::get('/list-loaitin','TheloaiController@all_loaitin');
-Route::delete('detele-loaitin/{id}','TheloaiController@destroy');
+Route::get('/add-theloai','TheloaiController@add_theloai');
+Route::post('/add-theloai','TheloaiController@save_theloai');
+Route::get('/list-theloai','TheloaiController@all_theloai');
+Route::delete('detele-theloai/{id}','TheloaiController@destroy');
+
+//Bài viết
+Route::get('add-post','PostController@add_post');
+Route::post('/save-post','PostController@store');
+Route::get('/all-post','PostController@all_post');

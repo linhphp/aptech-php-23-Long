@@ -14,36 +14,36 @@ use App\Http\Requests;
 
 class TheloaiController extends Controller
 {
-    public function add_loaitin()
+    public function add_theloai()
     {
         //  $add_loaitin = Theloai::all();
 
-        return view('theloai.loaitin');
+        return view('theloai.theloai');
     }
 
 
-    public function save_loaitin(Request $request)
+    public function save_theloai(Request $request)
     {
-        $loaitin = new Theloai();
-        $loaitin->name = $request->tenloaitin;
-        $loaitin->save();
-        return Redirect::to('list-loaitin');
+        $theloai = new Theloai();
+        $theloai->name = $request->tentheloai;
+        $theloai->save();
+        return Redirect::to('list-theloai');
         
     }
 
-    public function all_loaitin()
+    public function all_theloai()
     {
-        $loaitin = Theloai::all();
+        $danhsach = Theloai::all();
 
         return view('theloai.list',[
-        'loaitin'=>$loaitin
+        'danhsach'=>$danhsach
         ]);
     }
 
     public function destroy($id)
     {
         Theloai::where('id',$id)->delete();   
-        return Redirect::to('list-loaitin');
+        return Redirect::to('list-theloai');
     }
 }
 

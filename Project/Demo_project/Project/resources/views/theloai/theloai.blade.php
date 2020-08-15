@@ -18,18 +18,18 @@
 
             <header class="col-xs-4 col-md-4 mx-auto text-primary">
             
-            Thêm danh mục loại tin
+            Thêm thể loại
             </header>
             
                 <div class="col-xs-4 col-md-4 mx-auto">
-                    <form action="{{URL::to('add-loaitin')}}" method="post">
+                    <form action="{{URL::to('add-theloai')}}" method="post">
                     {{csrf_field()}}
                         <div class="div mt-3">
-                            <label for="">Tên loại tin</label>
-                            <textarea type="text"class="form-control" name="tenloaitin"placeholder="Tên loại tin" ></textarea> 
+                            <label for="">Tên thể loại</label>
+                            <textarea type="text"class="form-control" name="tentheloai"placeholder="Tên thể loại" ></textarea> 
                         </div>
                         
-                        <button type="submit" class="btn-primary mt-3">Thêm loại tin</button>
+                        <button type="submit" class="btn-primary mt-3">Thêm thể loại</button>
                     
                     </form>
                 

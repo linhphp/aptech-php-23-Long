@@ -14,8 +14,11 @@
                 </ul>
                 <header>Danh mục tin tức </header> 
                 <ul class="sub">
-                    <li><a href="{{URL::to('/add-loaitin')}}">Thêm thể loại</a></li>
-                    <li><a href="{{URL::to('/list-loaitin')}}">Danh sách thể loại</a></li>
+                    <li><a href="{{URL::to('/add-theloai')}}">Thêm thể loại</a></li>
+                    <li><a href="{{URL::to('/list-theloai')}}">Danh sách thể loại</a></li>
+                    <li><a href="{{URL::to('/add-post')}}">Thêm bài viết</a></li>
+                    <li><a href="{{URL::to('/all-post')}}">Danh sách bài viết</a></li>
+                   
                 </ul>   
             </div>
         </div>    
@@ -56,14 +59,5 @@
         </div>
     </div>
 </div>
-<script>
-    function addCart(id){
-     num = $("#num").val();
-     $post('addcart.php',{'id':id,'num':num},function(data){
-
-     }); 
-    }
-
-</script>
 
 @endsection

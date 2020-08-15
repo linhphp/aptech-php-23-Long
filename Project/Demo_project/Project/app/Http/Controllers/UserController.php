@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\User;
 use App\Product;
+use App\Theloai;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Hash;
@@ -14,17 +15,17 @@ use App\Http\Requests;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
+    //Hiển thị sản phẩm trên trang chú 
     public function index()
     {
        $products = Product::get();
         return view('users.index',compact('products')
         );
     }
+
+    
+
     public function users()
     {
        $users = User::all();
@@ -32,22 +33,13 @@ class UserController extends Controller
             'users'=>$users
         ]);
     }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
+    //Tạo tài khoản
     public function create()
     {
         return view('users.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
 
     {   
