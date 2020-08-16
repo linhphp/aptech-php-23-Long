@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh sách sản phẩm</title>
+    <title>Danh sách bài viết</title>
     <link rel="stylesheet" href="{{asset('/bootstrap.css')}}">
   </head>
   <body>
@@ -11,7 +11,7 @@
             <a href="{{route('users.index')}}">Trang chủ</a> 
         </div>
       <div class="div">
-      Liệt kê sản phẩm
+      Danh sách bài viết
       </div>
       <table class="table table-hover table-bordered mt-5">
             <thead>

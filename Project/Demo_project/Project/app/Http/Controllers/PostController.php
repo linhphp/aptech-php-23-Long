@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Theloai;
 use Session;
 use DB;
 use Illuminate\Http\Request;
@@ -13,45 +14,34 @@ class PostController extends Controller
 {
     public function add_post()
     {
-        return view('post.add-post');
+        $theloai = Theloai::all();
+        return view('post.add-post',[
+            'theloai'=>$theloai
+        ]);
     }
 
     public function store(Request $request)
     {
-        
-
-        $post = array();
-        $title = $request->title;
-        $slug = Str::slug($title,'-');
-        $description = $request->description;
-        $content = $request->content;
-        $theloai_id = $request->theloai_id;
-        $image_post = $request->file('post_image');
-
-        if($image_post){
-            $image_post_name = $image_post->getClientOriginalName();
-            $name_image = current(explode('.',$image_post_name));
-            $new_image = $name_image.rand(0,99).'.'.$image_post->getClientOriginalExtension();
-            $image_post ->move('public/image',$new_image);
+        $post = new Post();
+        $post['title']= $request->title;
+        $post['slug']= Str::slug($request->title,'-');
+        $post['description']= $request->description;
+        $post['content']= $request->content;
+        $post['post_image']= $request->post_image;
+        $post['theloai_id']= $request->theloai_id;
+        $post_image = $request->post_image;
+          
+        if($post_image){
+            $post_image_name = $post_image->getClientOriginalName();
+            $name_image = current(explode('.',$post_image_name));
+            $new_image = $name_image.rand(0,99).'.'.$post_image->getClientOriginalExtension();
+            $post_image ->move('public/image',$new_image);
             $post['post_image'] = $new_image;
-              
-            DB::table('post')->insert($post);
-            Session::put('thongbao','Thêm bài viết thành công');
-            return Redirect::to('all-post');     
-        }    
-        post::create([
-            'title'=>$title,
-            'slug'=>$slug,
-            'description'=>$description,
-            'content'=>$content,
-            'theloai_id'=>$theloai_id,
-            'post_image'=>$image_post
-        ]);
-    
-        
+          
+        } 
+        $post->save();
         $post['post_image'] == '';
-        DB::table('post')->insert($post);
-        Session::put('thongbao','Thêm danh mục sản phẩm thành công');
+
         return redirect::to('all-post');
     }
 

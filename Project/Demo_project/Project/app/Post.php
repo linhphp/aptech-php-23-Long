@@ -8,7 +8,7 @@ class Post extends Model
 {   
     protected $table ="Post";
     protected $primaryKey = "theloai_id";
-    protected $guarded =[];
+    protected $fillable = ['id','title','slug','description','content','post_image','theloai_id'];
 
     public function theloai()
     {

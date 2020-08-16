@@ -44,32 +44,48 @@
             ?>
                 <div class="col-xs-4 col-md-4 mx-auto">
                     <form action="{{URL::to('/save-post')}}" method="post" enctype="multipart/form-data" >
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <div class="div mt-3">
-                            <label for="">Tên bài viết</label>
-                            <input type="text"class="form-control" placeholder="Tên bài viết" name="title"> 
-                        </div>
-                        <!-- <div class="div">
-                            <label for="">Slug bài viết</label>
-                            <input type="text"class="form-control" placeholder="Tiêu đề bài viết" name="slug"> 
-                        </div> -->
-                        <div class="div">
-                            <label for="">Mô tả bài viết</label>
-                            <input type="text"class="form-control" placeholder="Mô tả bài viết" name="description"> 
-                        </div>
-                        <div class="div">
-                            <label for="">Nội dung bài viết</label>
-                            <textarea  class="form-control" placeholder="Nội dung bài viết" name="content"></textarea> 
-                        </div>
-                        <div class="div">
-                            <label for="">Danh mục loại tin</label>
-                            <input class="form-control rounded-0"  placeholder="Chọn danh mục" name="theloai_id">   
-                        </div>
-                        <div class="div">  
-                            <label for="name">Hình ảnh bài viết</label>
-                            <input type="file" class="form-control rounded-0" id="name" placeholder="Hình ảnh bài viết" name="post_image" >
-                        </div>
-                        <button type="submit" name="add_post" class="btn-primary mt-3">Thêm bài viết</button>
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <div class="div mt-3">
+                                <label for="">Tên bài viết</label>
+                                <input type="text"class="form-control" placeholder="Tên bài viết" name="title"> 
+                            </div>
+                            <!-- <div class="div">
+                                <label for="">Slug bài viết</label>
+                                <input type="text"class="form-control" placeholder="Tiêu đề bài viết" name="slug"> 
+                            </div> -->
+                            <div class="div">
+                                <label for="">Mô tả bài viết</label>
+                                <input type="text"class="form-control" placeholder="Mô tả bài viết" name="description"> 
+                            </div>
+                            <div class="div">
+                                <label for="">Nội dung bài viết</label>
+                                <textarea  class="form-control" placeholder="Nội dung bài viết" name="content"></textarea> 
+                            </div>
+                            <div class="div">
+                                <select class="form-control mt-3" name="theloai_id">
+                                
+                                    <option value="0">Chọn danh mục</option>
+                                    <!-- <input type="text" class="form-control" name="theloai_id"> -->
+                                    @foreach($theloai as $tl)
+                                        @if($tl->theloai_id ==0)
+                                            <option value="{{$tl->id}}">{{$tl->name}}</option>
+                                            @foreach($theloai as $tloai )
+                                                @if($tloai->theloai_id |=0 && $tloai->theloai_id ==$tl->id)
+                                                <option value="{{$tloai->id}}">{{$tloai->name}}</option>      
+
+                                                @endif
+                                            @endforeach
+                                        @endif       
+                                    @endforeach
+                                </select>    
+                            </div>
+                            <div class="div">  
+                                <label for="name">Hình ảnh bài viết</label>
+                                <input type="file" class="form-control rounded-0" id="name" placeholder="Hình ảnh bài viết" name="post_image" >
+                            </div>
+                   
+                            <button type="submit" name="add_post" class="btn-primary mt-3">Thêm bài viết</button>
+                        </form> 
                 </div>
         </section>        
     </div>
