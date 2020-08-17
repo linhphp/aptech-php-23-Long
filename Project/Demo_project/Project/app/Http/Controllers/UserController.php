@@ -19,7 +19,7 @@ class UserController extends Controller
     //Hiển thị sản phẩm trên trang chú 
     public function index()
     {
-       $products = Product::get();
+       $products = Product::paginate(6);
         return view('users.index',compact('products')
         );
     }

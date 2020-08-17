@@ -36,6 +36,7 @@
                  @if (!empty ($cate->cate_name))
                       {!! $cate->cate_name !!}
                  @endif
+                <!-- {{$product->category_product['cate_name']}} -->
                 </td> 
                 <td><img src="public/image/{{$product->product_image}}"height="100" width="100"></td>
                 <td>{{$product->product_price}} VNĐ</td>
@@ -52,7 +53,13 @@
               </tr>
               @endforeach          
             </tbody>
-        </table> 
+        </table>
+        <br><br>
+        
+          <span>{{ $products->render() }}</span>
+        
+        
+
   </body>  
 
        

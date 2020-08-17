@@ -58,6 +58,8 @@
             
         </div>
     </div>
+    <br>
+    <span>{{ $products->render() }}</span>
 </div>
 
 @endsection

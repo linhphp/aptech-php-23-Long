@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thêm sản phẩm</title>
+    <title>Thêm bài viết</title>
     <link rel="stylesheet" href="{{asset('/bootstrap.css')}}">
 </head>
 <body>
@@ -67,15 +67,15 @@
                                     <option value="0">Chọn danh mục</option>
                                     <!-- <input type="text" class="form-control" name="theloai_id"> -->
                                     @foreach($theloai as $tl)
-                                        @if($tl->theloai_id ==0)
+                                        <!-- @if($tl->theloai_id ==0) -->
                                             <option value="{{$tl->id}}">{{$tl->name}}</option>
                                             @foreach($theloai as $tloai )
-                                                @if($tloai->theloai_id |=0 && $tloai->theloai_id ==$tl->id)
+                                                @if($tloai->theloai_id |=0 && $tloai->theloai_id == $tl->id)
                                                 <option value="{{$tloai->id}}">{{$tloai->name}}</option>      
 
                                                 @endif
                                             @endforeach
-                                        @endif       
+                                        <!-- @endif        -->
                                     @endforeach
                                 </select>    
                             </div>

@@ -19,9 +19,10 @@ class ProductController extends Controller
   //Thêm sản phẩm
   public function add_product()
   {  
-     
-     $add_product = category_product::all();
-     return view('products.add_product');
+     $products = Product::all();
+     $categorys = category_product::all();
+     return view('products.add_product',compact('products','categorys'));
+      
   }
   
   //Hiển thị chi tiết 1 sản phẩm
@@ -37,15 +38,33 @@ class ProductController extends Controller
   {   
       
       // $cate = DB::table('category_product')->where('id',$product->product_cate)->first();
-      $products = DB::table('product')->get();
+      $products = Product::paginate(5);
+      $category_product = category_product::all();
       
-      return view('products.all_product',compact('products')); 
+      
+      return view('products.all_product',compact('products','category_product')); 
   }
 
   
   //Lưu sản phẩm
   public function store(Request $request)
-  {
+  {     
+        $data = request()->validate([
+          'product_name'=>'required',
+          'product_price'=>'required',
+          'product_unit'=>'required',
+          'product_desc'=>'required', 
+          
+          'product_image'=>'required|image',    
+        ],
+        [
+          'product_name.required'=>'Chưa nhập tên sản phẩm',
+          'product_price.required'=>'Chưa nhập giá sản phẩm',
+          'product_unit.required'=>'Chưa nhập số lượng sản phẩm',
+          'product_desc.required'=>'Chưa nhập mô tả sản phẩm',
+          
+          'product_image.required'=>'Chưa thêm hình ảnh sản phẩm',
+        ]);
     
         $data =array();
         $data['product_name']= $request->product_name;
@@ -64,14 +83,12 @@ class ProductController extends Controller
           $get_image -> move('public/image',$new_image);
           $data['product_image'] = $new_image;
 
-          DB::table('product')->insert($data);
-          Session::put('thongbao','Thêm danh mục sản phẩm thành công');
-          return Redirect::to('add-product');      
+         
         }
        
         $data['product_image'] == '';
         DB::table('product')->insert($data);
-        Session::put('thongbao','Thêm danh mục sản phẩm thành công');
+        Session::put('thongbao','Thêm sản phẩm thành công');
         return redirect::to('add-product');
         
 

@@ -31,7 +31,7 @@
                     <td>{{$pt->id}}</td>
                     <td>{{$pt->title}}</td>
                     <td>{{$pt->slug}}</td>
-                    <td>{{$pt->post_image}}</td>
+                    <td><img src="public/image/{{$pt->post_image}}"height="100" width="100"></td>
                     <td>{{$pt->description}}</td>
                     <td>{{$pt->content}}</td>
                     <td>
@@ -41,4 +41,6 @@
              @endforeach
             </tbody>
         </table> 
+        <hr>
+        <span>{{ $all_post->render() }}</span>
   </body>  

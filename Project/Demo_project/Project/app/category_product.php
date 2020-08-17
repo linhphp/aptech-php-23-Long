@@ -10,11 +10,11 @@ class category_product extends Model
     // use SoftDeletes;
     protected $table="category_product";
     protected $primaryKey ="id";
-    protected $fillable = ['id','cate_name'];
+    protected $fillable = ['cate_name'];
     
 
     public function Product(){
-        return $this->hasOne('App\Model\Product','product_cate');
+        return $this->hasMany('App\Model\Product','product_cate');
     }
 
 }

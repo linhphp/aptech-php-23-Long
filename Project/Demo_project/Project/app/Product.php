@@ -13,11 +13,11 @@ use Illuminate\Auth\Authenticatable as AuthenticableTrait;
 class Product extends Model 
 {
     protected $table="Product";
-    protected $primaryKey = "product_cate";
-    protected $guarded =[];
+    protected $primaryKey = "id";
+    protected $fillable =['product_name','product_price','product_image','product_desc','product_unit','product_cate'];
     
    public function category(){
-       return $this->belongsto('App\category_product','id');
+       return $this->belongsTo('App\category_product','product_cate');
    }
    
 }

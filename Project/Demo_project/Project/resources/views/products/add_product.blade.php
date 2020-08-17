@@ -11,19 +11,11 @@
 </body>
 </html>
 
-<!-- @if(count($errors)>0)
-
-  @foreach($errors->all() as $err)
-  <div class="alert-danger alert">
-  {{$err}}
-  </div>
-  @endforeach 
-@endif
 @if(Session::has('thongbao'))
 <div class="row">
 {{Session::get('thongbao')}}
 </div>
-@endif  -->
+@endif 
 <div class="row">
     <div class="col-lg-12">
         <section class="panel mt-3">
@@ -62,8 +54,18 @@
                             <textarea style="resize:none" class="form-control" placeholder="Mô tả sản phẩm" name="product_desc" ></textarea> 
                         </div>
                         <div class="div">
-                            <label for="">Danh mục sản phẩm</label>
-                            <input class="form-control rounded-0"  placeholder="Chọn danh mục" name="product_cate">   
+                            <select class="form-control mt-3" name="product_cate">
+                                
+                                <option value="0">Chọn danh mục</option>
+
+                                @foreach($categorys  as $category )
+
+                                    <option value="{{$category->id}}">{{$category->id}}</option>
+
+                                                              
+                                @endforeach
+                               
+                            </select>       
                         </div>
                         <div class="div">  
                             <label for="name">Hình ảnh sản phẩm</label>

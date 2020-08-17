@@ -47,7 +47,7 @@ class PostController extends Controller
 
     public function all_post()
     {   
-        $all_post = post::get();
+        $all_post = post::paginate(5);
         return view('post.all-post',[
             'all_post'=>$all_post
         ]);
