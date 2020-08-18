@@ -33,10 +33,9 @@
                 <td>{{$product->product_name}}</td>
                 <td>
                   <?php $cate = DB::table('category_product')->where('id',$product->product_cate)->first();?>
-                 @if (!empty ($cate->cate_name))
-                      {!! $cate->cate_name !!}
-                 @endif
-                <!-- {{$product->category_product['cate_name']}} -->
+                
+                      {{ $cate->cate_name }}
+           
                 </td> 
                 <td><img src="public/image/{{$product->product_image}}"height="100" width="100"></td>
                 <td>{{$product->product_price}} VNĐ</td>

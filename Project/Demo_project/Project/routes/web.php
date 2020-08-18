@@ -62,3 +62,5 @@ Route::delete('detele-theloai/{id}','TheloaiController@destroy');
 Route::get('add-post','PostController@add_post');
 Route::post('/save-post','PostController@store');
 Route::get('/all-post','PostController@all_post');
+Route::get('/baiviet/{id}','PostController@chitiet');
+

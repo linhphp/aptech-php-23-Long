@@ -29,8 +29,13 @@
              @foreach($all_post as $pt)
                 <tr>
                     <td>{{$pt->id}}</td>
-                    <td>{{$pt->title}}</td>
-                    <td>{{$pt->slug}}</td>
+                    <td><a href="{{URL::to('baiviet/'.$pt->id)}}">{{$pt->title}}</a></td>
+                    <td>
+                    <?php $theloai = DB::table('theloai')->where('id',$pt->theloai_id)->first(); ?>
+                      
+                      {{$theloai->name}}
+                    
+                    </td>
                     <td><img src="public/image/{{$pt->post_image}}"height="100" width="100"></td>
                     <td>{{$pt->description}}</td>
                     <td>{{$pt->content}}</td>

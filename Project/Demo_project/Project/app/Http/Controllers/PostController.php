@@ -53,4 +53,9 @@ class PostController extends Controller
         ]);
     }
 
+    public function chitiet(Request $request)
+    {
+        $chitiet = Post::where('id',$request->id)->first();
+        return view('post.chitiet',compact('chitiet'));
+    }
 }

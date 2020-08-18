@@ -55,16 +55,17 @@
                         </div>
                         <div class="div">
                             <select class="form-control mt-3" name="product_cate">
-                                
                                 <option value="0">Chọn danh mục</option>
 
-                                @foreach($categorys  as $category )
+                                @foreach($categorys  as $category)
+                                    <option value="{{$category->id}}">{{$category->cate_name}}</option>    
+                                    @foreach($categorys as $cate)    
+                                        @if($cate->product_cate |=0 && $cate->product_cate == $category->id)
+                                            <option value="{{$cate->id}}">{{$cate->cate_name}}</option>      
 
-                                    <option value="{{$category->id}}">{{$category->id}}</option>
-
-                                                              
+                                        @endif    
+                                    @endforeach
                                 @endforeach
-                               
                             </select>       
                         </div>
                         <div class="div">  

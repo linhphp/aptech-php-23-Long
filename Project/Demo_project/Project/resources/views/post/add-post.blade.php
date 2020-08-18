@@ -65,11 +65,12 @@
                                 <select class="form-control mt-3" name="theloai_id">
                                 
                                     <option value="0">Chọn danh mục</option>
-                                    <!-- <input type="text" class="form-control" name="theloai_id"> -->
+                                    
                                     @foreach($theloai as $tl)
                                         <!-- @if($tl->theloai_id ==0) -->
                                             <option value="{{$tl->id}}">{{$tl->name}}</option>
                                             @foreach($theloai as $tloai )
+                                            
                                                 @if($tloai->theloai_id |=0 && $tloai->theloai_id == $tl->id)
                                                 <option value="{{$tloai->id}}">{{$tloai->name}}</option>      
 
