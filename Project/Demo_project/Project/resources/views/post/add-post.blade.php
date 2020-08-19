@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thêm bài viết</title>
     <link rel="stylesheet" href="{{asset('/bootstrap.css')}}">
+    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 </head>
 <body>
     
@@ -59,7 +60,7 @@
                             </div>
                             <div class="div">
                                 <label for="">Nội dung bài viết</label>
-                                <textarea  class="form-control" placeholder="Nội dung bài viết" name="content"></textarea> 
+                                <textarea  class="form-control ckeditor" placeholder="Nội dung bài viết" name="content"></textarea> 
                             </div>
                             <div class="div">
                                 <select class="form-control mt-3" name="theloai_id">
