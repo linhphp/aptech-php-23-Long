@@ -43,7 +43,7 @@
                                 <h5 class="card-title">{{number_format($pro->product_price)}} VNĐ</h5>
                                 
                                 <label for="">Số lượng</label>
-                                <input name="qty" type="number" min="1" value="1"> 
+                                <input class="text-center" name="qty" type="number" min="1" value="1"> 
                                 <input name="productid_hidden" type="hidden" value="{{$pro->id}}">
                                 
                             
