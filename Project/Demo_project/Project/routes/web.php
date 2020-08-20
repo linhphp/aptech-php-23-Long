@@ -64,3 +64,16 @@ Route::post('/save-post','PostController@store');
 Route::get('/all-post','PostController@all_post');
 Route::get('/baiviet/{id}','PostController@chitiet');
 
+//Thể loại 3 bảng
+Route::get('add-tloai','TloaiController@add_tloai');
+Route::post('/add-tloai','TloaiController@save_tloai');
+Route::get('/list-tloai','TloaiController@all_tloai');
+Route::delete('detele-tloai/{id}','TloaiController@destroy');
+
+//Loại tin 3 bảng
+Route::get('add-ltin','LtinController@add_ltin');
+Route::post('add-ltin','LtinController@save_ltin');
+Route::get('/list-ltin','LtinController@all_ltin');
+
+
+

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thêm danh mục</title>
+    <title>Thêm danh mục thể loại</title>
     <link rel="stylesheet" href="{{asset('/bootstrap.css')}}">
 </head>
 <body>
@@ -22,7 +22,7 @@
             </header>
             
                 <div class="col-xs-4 col-md-4 mx-auto">
-                    <form action="{{URL::to('add-theloai')}}" method="post">
+                    <form action="{{URL::to('add-tloai')}}" method="post">
                     {{csrf_field()}}
                         <div class="div mt-3">
                             <label for="">Tên thể loại</label>
