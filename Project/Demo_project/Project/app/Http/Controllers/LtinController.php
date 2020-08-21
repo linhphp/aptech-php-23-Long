@@ -13,7 +13,7 @@ class LtinController extends Controller
     public function add_ltin()
     {
         $theloai = Tloai::all();
-        return view('ltin.add-ltin',[
+        return view('loaitin.add-ltin',[
             'theloai'=>$theloai
         ]);
     }
@@ -33,7 +33,7 @@ class LtinController extends Controller
     public function all_ltin()
     {
         $loaitin = Ltin::all();
-        return view('ltin.list-ltin',[
+        return view('loaitin.list-ltin',[
             'loaitin'=>$loaitin
         ]);
     }

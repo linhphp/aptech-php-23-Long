@@ -14,10 +14,12 @@
                 </ul>
                 <header>Danh mục tin tức </header> 
                 <ul class="sub">
-                    <li><a href="{{URL::to('/add-theloai')}}">Thêm thể loại</a></li>
-                    <li><a href="{{URL::to('/list-theloai')}}">Danh sách thể loại</a></li>
-                    <li><a href="{{URL::to('/add-post')}}">Thêm bài viết</a></li>
-                    <li><a href="{{URL::to('/all-post')}}">Danh sách bài viết</a></li>
+                    <li><a href="{{URL::to('/add-tloai')}}">Thêm thể loại</a></li>
+                    <li><a href="{{URL::to('/list-tloai')}}">Danh sách thể loại</a></li>
+                    <li><a href="{{URL::to('/add-ltin')}}">Thêm loại tin</a></li>
+                    <li><a href="{{URL::to('/list-ltin')}}">Danh sách loại tin</a></li>
+                    <li><a href="{{URL::to('/add-tintuc')}}">Thêm bài viết</a></li>
+                    <li><a href="{{URL::to('/all-tintuc')}}">Danh sách bài viết</a></li>
                    
                 </ul>   
             </div>

@@ -10,7 +10,7 @@
 <body>
 <a href="{{route('users.index')}}">Trang chủ</a>
 <br>
-<a href="{{URL::to('all-post')}}">Quay lại danh sách bài viết</a>
+<a href="{{URL::to('all-tintuc')}}">Quay lại danh sách bài viết</a>
 
     <div class="container">
         <div class="row">

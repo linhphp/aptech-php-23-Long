@@ -26,19 +26,19 @@
               </tr>
             </thead>
             <tbody>
-             @foreach($all_post as $pt)
+             @foreach($all_tintuc as $tintuc)
                 <tr>
-                    <td>{{$pt->id}}</td>
-                    <td><a href="{{URL::to('baiviet/'.$pt->id)}}">{{$pt->title}}</a></td>
+                    <td>{{$tintuc->id}}</td>
+                    <td><a href="{{URL::to('baiviet/'.$tintuc->id)}}">{{$tintuc->title}}</a></td>
                     <td>
-                    <?php $theloai = DB::table('theloai')->where('id',$pt->theloai_id)->first(); ?>
+                    <?php $theloai = DB::table('Ltin')->where('id',$tintuc->ltin_id)->first(); ?>
                       
                       {{$theloai->name}}
                     
                     </td>
-                    <td><img src="public/image/{{$pt->post_image}}"height="100" width="100"></td>
-                    <td>{{$pt->description}}</td>
-                    <td>{{$pt->content}}</td>
+                    <td><img src="public/image/{{$tintuc->post_image}}"height="100" width="100"></td>
+                    <td>{{$tintuc->description}}</td>
+                    <td>{{$tintuc->content}}</td>
                     <td>
                     <button>Xóa</button>
                     </td>
@@ -47,5 +47,5 @@
             </tbody>
         </table> 
         <hr>
-        <span>{{ $all_post->render() }}</span>
+        <span>{{ $all_tintuc->render() }}</span>
   </body>  

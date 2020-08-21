@@ -15,7 +15,7 @@ class TloaiController extends Controller
     //Thêm thể loại
     public function add_tloai()
     {
-        return view('tloai.add-tloai');
+        return view('theloai.add-tloai');
     }
 
     //Lưu thể loại
@@ -33,7 +33,7 @@ class TloaiController extends Controller
     {
         $tloai = Tloai::all();
 
-        return view('tloai.list-tloai',[
+        return view('theloai.list-tloai',[
             'tloai'=>$tloai
         ]);
     }
