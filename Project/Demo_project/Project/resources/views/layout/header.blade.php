@@ -1,23 +1,27 @@
 <div class="header">
-  <div class="d-flex flex-row ">
-    <div class="col-12 px-0">
-      <div class="d-flex flex-row align-items-center">
+    <div class="col-12 ">
+      <div class="d-flex ">
+        <div class="col-6 d-flex mx-auto">
+          <h1 class=" font-weight-bold text-white ">G-Nol </h1>
+          <i class="fas fa-donate" style="font-size:36px;color:#0099FF;"></i>
+          <h1 class=" font-weight-bold text-white ">hop </h1>
+        </div>
         <div class="col-3">
+          
+        </div>
+        <div class="col-3 mt-3 d-block">
+          
+          <a href =""><i class="fas fa-user" style="font-size:30px;color:blue;"></i></a>
+          @if(Auth::check())
+            
+            {{"Xin chào"}}
+           
+            <a href ="{{URL::to('/logout')}}">Đăng Xuất</a> 
+          @else
+            <a href ="{{URL::to('/login')}}">Đăng nhập</a>
+          @endif
         
-            <a href="{{URL::to('trangchu')}}">Trang Chủ</a>  
-      
-        </div>
-        <div class="col-6">
-          <h1 class="text-center font-weight-bold text-white ">SHOP BÁN HÀNG</h1>
-        </div>
-        <div class="col-3 text-center mt-3">
-            <ul>  
-              <li><a href ="{{URL::to('/login')}}">Đăng nhập</a></li>
-              <li><a href ="">Đăng xuất</a></li>
-            </ul>
         </div>
       </div>
     </div>
-    
-  </div>
 </div>

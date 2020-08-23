@@ -17,6 +17,10 @@ Route::get('trangchu','UserController@index')->name('users.index');
 Route::get('/login','UserController@getlogin')->name('users.login');
 Route::post('/login','UserController@postlogin')->name('users.login');
 
+//logout
+Route::get('/logout','UserController@logout');
+
+
 //user
 Route::get('users','UserController@users')->name('users.users');
 Route::get('/users/create','UserController@create')->name('users.create');

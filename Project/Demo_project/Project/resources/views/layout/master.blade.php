@@ -10,7 +10,8 @@
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="{{asset('/bootstrap.css')}}">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/yourcode.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  
   <link rel="stylesheet" href="{{asset('/style.css')}}">
   <script src="{{asset('/asset/js/jquery-3.3.1.min.js')}}"></script>
   <script src="https://cdn.ckeditor.com/ckeditor5/21.0.0/classic/ckeditor.js"></script>

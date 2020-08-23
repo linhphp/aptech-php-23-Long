@@ -24,8 +24,6 @@ class UserController extends Controller
         );
     }
 
-    
-
     public function users()
     {
        $users = User::all();
@@ -40,6 +38,7 @@ class UserController extends Controller
         return view('users.create');
     }
 
+    //Lưu tài khoản
     public function store(Request $request)
 
     {   
@@ -61,24 +60,7 @@ class UserController extends Controller
         ]);
         
         $user = new User();
-        //dd($request->Anhdaidien);
-        // if($request->hasFile('Anhdaidien')){
-        //     $file=$request->file('Anhdaidien');
-        //     if($file->getClientOriginalExtension('Anhdaidien') =="png"||
-        //         $file->getClientOriginalExtension('Anhdaidien')=="jpg"){
-        //         $file_name=$file->getClientOriginalName('Anhdaidien');
-        //         $file->move('image',$file_name);
-        //         $user->Anhdaidien = $file_name;       
-        //     }
-        //     else {
-        //         return null;
-                
-        //     }
-            
-        // }
-        // else {
-        //     $user->Anhdaidien = null;
-        // }
+     
         $user->name =$request->name;
         $user->email=$request->email;
         $user->nickname=$request->nickname;
@@ -88,6 +70,15 @@ class UserController extends Controller
         return redirect()->back()->with('thongbao','Tạo tài khoản thành công');
     }
 
+    //Logout
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/trangchu'); 
+    }
+
+
+    //Xóa tải khoản
     public function destroy($id)
     {
         User::where('id',$id)->delete();
@@ -126,6 +117,8 @@ class UserController extends Controller
         }
     }
 
+
+    //Thanh toán
     public function check_out()
     {
         return view('check-out.check-out');
