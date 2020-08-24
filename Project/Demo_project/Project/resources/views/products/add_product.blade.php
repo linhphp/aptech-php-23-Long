@@ -20,14 +20,15 @@
             <section class="panel mt-3">
                 <a href="{{route('users.index')}}">Trang chủ</a>
                 <header class="col-md-6 mx-auto text-primary">Thêm sản phẩm</header>
+                
+                <div class="col-md-6 mx-auto">
                 <?php
                     $message = Session::get('thongbao');
                     if($message){
-                        echo '<span class="text-alert">'.$message.'</span>';
+                        echo '<span class="text-alert alert-danger mt-3">'.$message.'</span>';
                         session::put('thongbao',null);
                     }  
                 ?>
-                <div class="col-md-6 mx-auto">
                     <form action="{{URL::to('/save-product')}}" method="post" enctype="multipart/form-data" >
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="mt-3">            

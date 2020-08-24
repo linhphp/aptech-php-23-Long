@@ -31,12 +31,7 @@
               <tr class="text-center">
                 <td>{{$product->id}}</td>
                 <td>{{$product->product_name}}</td>
-                <td>
-                  <?php $cate = DB::table('category_product')->where('id',$product->product_cate)->first();?>
-                
-                      {{ $cate->cate_name }}
-           
-                </td> 
+                <td>{{$product->category_product->cate_name}}</td> 
                 <td><img src="public/image/{{$product->product_image}}"height="100" width="100"></td>
                 <td>{{$product->product_price}} VNĐ</td>
                 <td>{{$product->product_desc}}</td>

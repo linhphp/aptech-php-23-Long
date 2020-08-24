@@ -12,12 +12,12 @@ class Ltin extends Model
     
     public function Tloai()
     {
-        return $this->belongsTo('App\model\Tloai','id');
+        return $this->belongsTo('App\Tloai','id');
     } 
     
 
     public function Tintuc()
     {
-        return $this->hasMany('App\model\Tintuc','ltin_id','id');
+        return $this->hasMany('App\Tintuc','ltin_id','id');
     } 
 }

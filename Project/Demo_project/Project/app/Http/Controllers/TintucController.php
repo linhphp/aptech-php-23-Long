@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Tintuc;
 use App\Ltin;
+use App\Tloai;
 use Session;
 use DB;
 use Illuminate\Http\Request;
@@ -14,10 +15,12 @@ use Illuminate\Support\Facades\Redirect;
 class TintucController extends Controller
 {
     public function add_tintuc()
-    {
+    {   
+        $theloai = Tloai::all();
         $loaitin = Ltin::all();    
         return view('tintuc.add-tintuc',[
-            'loaitin'=>$loaitin
+            'theloai'=>$theloai,
+            'loaitin'=>$loaitin     
         ]);
     }
 

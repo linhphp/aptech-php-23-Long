@@ -11,6 +11,6 @@ class Tintuc extends Model
 
     public function Ltin()
     {
-        return $this->belongsTo('App\model\Ltin','ltin_id','id');
+        return $this->belongsTo('App\Ltin','ltin_id','id');
     }
 }

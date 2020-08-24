@@ -18,8 +18,8 @@
               <tr class="text-center">
                 <th scope="col" class="">#</th>
                 <th scope="col" class="">Tên bài viết</th>
-                <th scope="col" class="">Danh mục bài viết</th>
-                <th scope="col" class="">Hình ảnh bài viết</th>
+                <th scope="col" class="">Danh mục thể loại</th>
+                <th scope="col" class="">Danh mục loại tin</th>
                 <th scope="col" class="">Mô tả bài viết</th>
                 <th scope="col" class="">Nội dung bài viết</th>
                 <th scope="col" class="">Sữa/Xóa</th>   
@@ -30,18 +30,19 @@
                 <tr>
                     <td>{{$tintuc->id}}</td>
                     <td><a href="{{URL::to('baiviet/'.$tintuc->id)}}">{{$tintuc->title}}</a></td>
+                    <td>{{$tintuc->Ltin->Tloai->name}}</td>
+                    <td>{{$tintuc->Ltin->name}}</td>
                     <td>
-                    <?php $theloai = DB::table('Ltin')->where('id',$tintuc->ltin_id)->first(); ?>
-                      
-                      {{$theloai->name}}
-                    
+                      <p>{{$tintuc->description}}</p> 
+                      <img src="public/image/{{$tintuc->post_image}}"height="100" width="100">
                     </td>
-                    <td><img src="public/image/{{$tintuc->post_image}}"height="100" width="100"></td>
-                    <td>{{$tintuc->description}}</td>
                     <td>{{$tintuc->content}}</td>
-                    <td>
-                    <button>Xóa</button>
-                    </td>
+                    <td class="d-flex ">
+                     
+                        <button class="m-2 ">Sửa</button>
+                        <button class="m-2 ">Xóa</button>
+                      
+                    </td>  
                 </tr>
              @endforeach
             </tbody>
