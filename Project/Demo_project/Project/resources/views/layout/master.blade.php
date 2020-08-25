@@ -11,11 +11,11 @@
   <link rel="stylesheet" href="{{asset('/bootstrap.css')}}">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  
+  <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
   <link rel="stylesheet" href="{{asset('/style.css')}}">
   <script src="{{asset('/asset/js/jquery-3.3.1.min.js')}}"></script>
-  <script src="https://cdn.ckeditor.com/ckeditor5/21.0.0/classic/ckeditor.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   
   

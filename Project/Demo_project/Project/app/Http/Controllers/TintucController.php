@@ -63,5 +63,7 @@ class TintucController extends Controller
         $chitiet = Tintuc::where('id',$request->id)->first();
         return view('tintuc.chitiet',compact('chitiet'));
     }
-}
 
+   
+}
+?>

@@ -67,11 +67,15 @@ Route::get('add-ltin','LtinController@add_ltin');
 Route::post('add-ltin','LtinController@save_ltin');
 Route::get('/list-ltin','LtinController@all_ltin');
 
+
 //Tin tức 
 Route::get('add-tintuc','TintucController@add_tintuc');
 Route::post('/save-tintuc','TintucController@store');
 Route::get('/all-tintuc','TintucController@all_tintuc');
 Route::get('/baiviet/{id}','TintucController@chitiet');
+
+//
+Route::post('/ajax-add','LtinController@ajax_add');
 
 
 

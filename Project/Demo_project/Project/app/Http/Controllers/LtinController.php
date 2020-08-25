@@ -37,4 +37,23 @@ class LtinController extends Controller
             'loaitin'=>$loaitin
         ]);
     }
+
+     //Ajax loại tin
+    public function ajax_add(request $request)
+    {   
+        $data = $request->all();
+        $output = '';
+        if($data['action']== "theloai"){
+            $loaitins = Ltin::where('tloai_id',$data['idTheloai'])->get();
+                $output.=' <option>--Chọn loại tin--</option>';
+            foreach($loaitins as $lt){
+                $output.= '<option value="'.$lt->id.'">'.$lt->name.'</option>';
+            }     
+        
+            
+        }  
+        echo $output;  
+    }
 }
+?>
+ 
