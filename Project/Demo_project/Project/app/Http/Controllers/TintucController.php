@@ -49,9 +49,9 @@ class TintucController extends Controller
     }
 
     //List tin tức
-    public function all_tintuc()
+    public function all_tintuc(Request $request)
     {
-        $all_tintuc = Tintuc::paginate(5);
+        $all_tintuc = Tintuc::orderby('id','desc')->paginate(6);
         return view('tintuc.list-tintuc',[
             'all_tintuc'=>$all_tintuc
         ]);

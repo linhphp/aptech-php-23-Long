@@ -26,17 +26,17 @@
               </tr>
             </thead>
             <tbody>
-             @foreach($all_tintuc as $tintuc)
+             @foreach($all_tintuc as $tt)
                 <tr>
-                    <td>{{$tintuc->id}}</td>
-                    <td><a href="{{URL::to('baiviet/'.$tintuc->id)}}">{{$tintuc->title}}</a></td>
-                    <td>{{$tintuc->Ltin->Tloai->name}}</td>
-                    <td>{{$tintuc->Ltin->name}}</td>
+                    <td>{{$tt->id}}</td>
+                    <td><a href="{{URL::to('baiviet/'.$tt->id)}}">{{$tt->title}}</a></td>
+                    <td>{{$tt->Ltin->Tloai->name}}</td>
+                    <td>{{$tt->Ltin->name}}</td>
                     <td>
-                      <p>{{$tintuc->description}}</p> 
-                      <img src="public/image/{{$tintuc->post_image}}"height="100" width="100">
+                      <p>{{$tt->description}}</p> 
+                      <img src="public/image/{{$tt->post_image}}"height="100" width="100">
                     </td>
-                    <td>{{$tintuc->content}}</td>
+                    <td>{{$tt->content}}</td>
                     <td class="d-flex ">
                      
                         <button class="m-2 ">Sửa</button>

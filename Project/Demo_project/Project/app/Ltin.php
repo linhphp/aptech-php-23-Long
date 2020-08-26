@@ -12,7 +12,7 @@ class Ltin extends Model
     
     public function Tloai()
     {
-        return $this->belongsTo('App\Tloai','id');
+        return $this->belongsTo('App\Tloai','tloai_id','id');
     } 
     
 
