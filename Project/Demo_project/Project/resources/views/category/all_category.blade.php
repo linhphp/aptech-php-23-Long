@@ -19,7 +19,7 @@
                 <tr class="text-center">
                     <th scope="col-4" class="">#</th>
                     <th scope="col-4" class="">Tên danh mục sản phẩm</th>
-                    <th scope="col-4" class="">Sữa/Xóa</th>
+                    <th scope="col-4" class="">Sửa/Xóa</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,7 +31,9 @@
                     <form action="{{route('all_category.delete',$cate->id)}}" method="post">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <input type="hidden" name="_method" value="delete">
-                        <button>Xoa</button>
+                        <a href="{{URL::to('/edit-category/'.$cate->id)}}">Sửa</a>
+                        {{"/"}}
+                        <a href="">Xóa</a>
                     </form>
                 </td>
             </tr>

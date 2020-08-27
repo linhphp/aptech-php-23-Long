@@ -38,6 +38,8 @@ Route::get('/thongtinsp/{id}','ProductController@chitietsp');
 Route::get('/add-category','CategoryController@add_category');
 Route::get('/all-category','CategoryController@all_category');
 Route::post('/save-category','CategoryController@save_category')->name('save_category');
+Route::get('/edit-category/{id}','CategoryController@edit_category');
+Route::post('/update-category/{id}','CategoryController@update');
 Route::delete('all-category/{id}','CategoryController@delete_category')->name('all_category.delete');
 
 //Giỏ hàng

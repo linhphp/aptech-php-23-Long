@@ -43,6 +43,24 @@ class CategoryController extends Controller
     return Redirect::to('all-category');
   }
 
+  //Sửa danh mục sản phẩm
+  public function edit_category($id)
+  {   
+      
+      $edit = category_product::find($id);
+        return view('category.edit_category')->with(compact('edit'));
+  }
+
+  //Update danh mục
+  public function update(Request $request, $id)
+  {
+    $category = category_product::find($id);
+    $category->cate_name = $request->edit_category;
+    $category->save();
+    
+    return Redirect::to('all-category');
+  }
+
 
   //Xóa danh mục sản phẩm
   public function delete_category($id)
