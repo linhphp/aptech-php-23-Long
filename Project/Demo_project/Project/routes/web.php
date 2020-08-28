@@ -33,6 +33,8 @@ Route::get('/all-product','ProductController@all_product');
 Route::post('/save-product','ProductController@store');
 Route::delete('all-product/{id}','ProductController@destroy')->name('all_product.delete');
 Route::get('/thongtinsp/{id}','ProductController@chitietsp');
+Route::get('/edit-product/{id}','ProductController@edit_product');
+Route::post('/update-product/{id}','ProductController@update');
 
 //category_product
 Route::get('/add-category','CategoryController@add_category');

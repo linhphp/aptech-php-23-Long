@@ -37,7 +37,6 @@ class ProductController extends Controller
   public function all_product()
   {   
       
-      // $cate = DB::table('category_product')->where('id',$product->product_cate)->first();
       $products = Product::paginate(5);
       $category_product = category_product::all();
       
@@ -91,8 +90,57 @@ class ProductController extends Controller
         Session::put('thongbao','Thêm sản phẩm thành công');
         return redirect::to('add-product');
         
-
    }
+
+  //Sửa sản phẩm
+  public function edit_product($id)
+  {
+    $products = Product::find($id); 
+    $categorys = category_product::all();
+    return view('products.edit')->with(compact('products','categorys'));
+  } 
+
+  //update sản phẩm
+  public function update(Request $request,$id)
+  {
+        $data = request()->validate([
+          'product_name'=>'required',
+          'product_price'=>'required',
+          'product_unit'=>'required',
+          'product_desc'=>'required',     
+        ],
+        [
+          'product_name.required'=>'Chưa nhập tên sản phẩm',
+          'product_price.required'=>'Chưa nhập giá sản phẩm',
+          'product_unit.required'=>'Chưa nhập số lượng sản phẩm',
+          'product_desc.required'=>'Chưa nhập mô tả sản phẩm',
+        ]);
+        $product = Product::find($id);  
+        $product['product_name']= $request->product_name;
+        $product['product_price']= $request->product_price;
+        $product['product_image']= $request->product_image;
+        $product['product_unit']= $request->product_unit;
+        $product['product_desc']= $request->product_desc;
+        $product['product_cate']= $request->product_cate;
+        $get_image = $request->file('product_image');
+  
+
+        if($get_image){
+          $get_image_name = $get_image->getClientOriginalName();
+          $name_image = current(explode('.',$get_image_name));
+          $new_image = $name_image.rand(0,99).'.'.$get_image->getClientOriginalExtension();
+          $get_image -> move('public/image',$new_image);
+          $product['product_image'] = $new_image;
+
+    }
+   
+    $product['product_image'] == '';
+    $product->save();
+ 
+    return redirect::to('all-product')->with('thongbao','Cập nhật sản phẩm thành công');
+
+  }
+
   //Xóa sản phẩm
   public function destroy()
   {

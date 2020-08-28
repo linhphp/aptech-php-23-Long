@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thêm sản phẩm</title>
+    <title>Cập nhật sản phẩm</title>
     <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
     <link rel="stylesheet" href="{{asset('/bootstrap.css')}}">
     
 </head>
 <body>
 <div class="container"> 
-<!-- @if(Session::has('thongbao'))
+@if(Session::has('thongbao'))
 <div class="row">
 {{Session::get('thongbao')}}
 </div>
-@endif -->
+@endif
     <div class="row">
         <div class="col-lg-12">
             <section class="panel mt-3">
                 <a href="{{route('users.index')}}">Trang chủ</a>
-                <header class="col-md-6 mx-auto text-primary">Thêm sản phẩm</header>
+                <header class="col-md-6 mx-auto text-primary">Cập nhật sản phẩm</header>
                 
                 <div class="col-md-6 mx-auto">
                 <?php
@@ -29,24 +29,23 @@
                         session::put('thongbao',null);
                     }  
                 ?>
-                    <form action="{{URL::to('/save-product')}}" method="post" enctype="multipart/form-data" >
+                    <form action="{{URL::to('/update-product/'.$products->id)}}" method="post" enctype="multipart/form-data" >
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="mt-3">            
                             <label for="">Tên sản phẩm</label> 
-                            <input type="text"class="form-control" placeholder="Tên sản phẩm" name="product_name">        
+                            <input type="text"class="form-control" placeholder="{{$products->product_name}}" name="product_name">        
                         </div>
                         <div class="mt-3">            
                             <label for="">Giá sản phẩm</label>       
-                            <input type="text"class="form-control" placeholder="Giá sản phẩm" name="product_price">        
+                            <input type="text"class="form-control" placeholder="{{$products->product_price}}" name="product_price">        
                         </div>
                         <div class="mt-3">            
                             <label for="">Số lượng</label>      
-                            <input type="text"class="form-control" placeholder="Số lượng sản phẩm" name="product_unit">            
+                            <input type="text"class="form-control" placeholder="{{$products->product_unit}}" name="product_unit">            
                         </div>
                         <div class="mt-3">            
-                            <label for="">Mô tả sản phẩm</label>
-                                
-                            <textarea type="text" class="form-control ckeditor" placeholder="Mô tả sản phẩm" name="product_desc" ></textarea> 
+                            <label for="">Mô tả sản phẩm</label>   
+                            <textarea type="text" class="form-control ckeditor" placeholder="" name="product_desc" >{{$products->product_desc}}</textarea> 
                         </div>
                         <div class="mt-3">           
                             <label for="">Danh mục </label>
@@ -59,10 +58,12 @@
                             </select>              
                         </div>
                         <div class="mt-3">           
-                            <label for="name">Hình ảnh</label>       
-                            <input type="file" class="form-control rounded-0" id="name" placeholder="Hình ảnh sản phẩm" name="product_image">         
+                            <label for="name">Hình ảnh</label>  
+                            <img src="{{URL::to('public/image/'.$products->product_image)}}"height="100" width="100">     
+                            <input type="file" class="form-control rounded-0" id="name" placeholder="Hình ảnh sản phẩm" name="product_image">
+                                     
                         </div>
-                            <button type="submit" name="add_product" class="btn-primary mt-3">Thêm sản phẩm</button>
+                            <button type="submit" name="add_product" class="btn-primary mt-3">Cập nhật sản phẩm</button>
                         </div>
                     </form>    
             </section>        

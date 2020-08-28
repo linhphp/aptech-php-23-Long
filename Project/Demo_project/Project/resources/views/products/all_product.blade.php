@@ -9,10 +9,22 @@
   <body>
         <div class="div mt-5">
             <a href="{{route('users.index')}}">Trang chủ</a> 
+              @if(Session::has('thongbao'))
+              <div class="row">
+              {{Session::get('thongbao')}}
+              </div>
+              @endif
         </div>
       <div class="div">
       Liệt kê sản phẩm
       </div>
+      <?php
+        $message = Session::get('thongbao');
+        if($message){
+          echo '<span class="text-alert alert-danger mt-3">'.$message.'</span>';
+          session::put('thongbao',null);
+          }  
+      ?>
       <table class="table table-hover table-bordered mt-5">
             <thead>
               <tr class="text-center">
@@ -23,7 +35,7 @@
                 <th scope="col" class="">Giá sản phẩm</th>
                 <th scope="col" class="">Mô tả sản phẩm</th>
                 <th scope="col" class="">Số lượng sản phẩm</th>
-                <th scope="col" class="">Sữa/Xóa</th>   
+                <th scope="col" class="">Sửa/Xóa</th>   
               </tr>
             </thead>
             <tbody>
@@ -40,7 +52,8 @@
                     <form action="{{route('all_product.delete',$product->id)}}" method="post">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <input type="hidden" name="_method" value="delete">
-                        <button>Xoa</button>
+                        <a href="{{URL::to('edit-product/'.$product->id)}}">Sửa</a>
+                        <a href="">Xóa</a>
                     </form>
                 </td>
                     
