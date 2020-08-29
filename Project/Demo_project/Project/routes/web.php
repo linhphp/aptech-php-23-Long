@@ -31,18 +31,18 @@ Route::delete('users/{id}','UserController@destroy')->name('users.destroy');
 Route::get('/add-product','ProductController@add_product');
 Route::get('/all-product','ProductController@all_product');
 Route::post('/save-product','ProductController@store');
-Route::delete('all-product/{id}','ProductController@destroy')->name('all_product.delete');
 Route::get('/thongtinsp/{id}','ProductController@chitietsp');
 Route::get('/edit-product/{id}','ProductController@edit_product');
-Route::post('/update-product/{id}','ProductController@update');
+Route::post('/update-product/{id}','ProductController@update_product');
+Route::get('delete-product/{id}','ProductController@delete_product')->name('all_product.delete');
 
 //category_product
 Route::get('/add-category','CategoryController@add_category');
 Route::get('/all-category','CategoryController@all_category');
 Route::post('/save-category','CategoryController@save_category')->name('save_category');
 Route::get('/edit-category/{id}','CategoryController@edit_category');
-Route::post('/update-category/{id}','CategoryController@update');
-Route::delete('all-category/{id}','CategoryController@delete_category')->name('all_category.delete');
+Route::post('/update-category/{id}','CategoryController@update_category');
+Route::get('delete-category/{id}','CategoryController@delete_category')->name('all_category.delete');
 
 //Giỏ hàng
 Route::post('/save-cart','CartController@save_cart');
@@ -64,12 +64,17 @@ Route::get('/address/{idmatp}','ProductController@gettinhthanh');
 Route::get('add-tloai','TloaiController@add_tloai');
 Route::post('/add-tloai','TloaiController@save_tloai');
 Route::get('/list-tloai','TloaiController@all_tloai');
-Route::delete('detele-tloai/{id}','TloaiController@destroy');
+Route::get('/edit-tloai/{id}','TloaiController@edit_tloai');
+Route::post('/update-tloai/{id}','TloaiController@update_tloai');
+Route::get('delete-tloai/{id}','TloaiController@delete');
 
 //Loại tin 
 Route::get('add-ltin','LtinController@add_ltin');
 Route::post('add-ltin','LtinController@save_ltin');
 Route::get('/list-ltin','LtinController@all_ltin');
+Route::get('/edit-ltin/{id}','LtinController@edit_ltin');
+Route::post('/update-ltin/{id}','LtinController@update_ltin');
+Route::get('delete-ltin/{id}','LtinController@delete');
 
 
 //Tin tức 

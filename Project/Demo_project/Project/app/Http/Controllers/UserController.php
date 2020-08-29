@@ -19,7 +19,7 @@ class UserController extends Controller
     //Hiển thị sản phẩm trên trang chú 
     public function index()
     {
-       $products = Product::paginate(6);
+       $products = Product::orderBy('id','desc')->paginate(6);
         return view('users.index',compact('products')
         );
     }
@@ -81,7 +81,10 @@ class UserController extends Controller
     //Xóa tải khoản
     public function destroy($id)
     {
-        User::where('id',$id)->delete();
+       $user = User::where('id',$id);
+       $user->delete();
+
+        return redirect('/users');
     }
 
     public function getlogin()

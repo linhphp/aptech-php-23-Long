@@ -38,10 +38,27 @@ class TloaiController extends Controller
         ]);
     }
 
-    //Xóa thể loại
-    public function destroy($id)
+    //Sửa thể loại
+    public function edit_tloai($id)
     {
-        Tloai::where('id',$id)->delete();   
+        $tloai = Tloai::find($id);
+        return view('theloai.edit-tloai')->with(compact('tloai'));    
+    }
+
+    //Update thể loại
+    public function update_tloai(request $request,$id)
+    {
+        $tloai = Tloai::find($id);
+        $tloai->name = $request->tentheloai;
+        $tloai->save();
+        return Redirect::to('/list-tloai');
+    }
+
+    //Xóa thể loại
+    public function delete($id)
+    {
+        $tloai = Tloai::find($id);
+        $tloai->delete();   
         return Redirect::to('list-tloai');
     }
 }

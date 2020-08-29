@@ -25,7 +25,7 @@
                 <tr class="text-center">
                     <th scope="col-4" class="">#</th>
                     <th scope="col-4" class="">Tên danh mục </th>
-                    <th scope="col-4" class="">Sữa/Xóa</th>
+                    <th scope="col-4" class="">Sửa | Xóa</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,11 +34,11 @@
                 <td scope="row">{{$tl->id}}</td>
                 <td scope="row">{{$tl->name}}</td>
                 <td>
-                <form action="{{URL::to('/detele-tloai',$tl->id)}}" method="post">
-                        <input type="hidden" name="_token" value="{{csrf_token()}}">
-                        <input type="hidden" name="_method" value="delete">
-                        <button>Xoa</button>
-                    </form>
+               
+                    <a href="{{URL::to('/edit-tloai/'.$tl->id)}}">Sửa</a>
+                    |
+                    <a href="{{URL::to('/delete-tloai/'.$tl->id)}}">Xóa</a>
+                
                 </td>
             </tr>
             @endforeach

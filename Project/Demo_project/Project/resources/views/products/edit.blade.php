@@ -54,7 +54,7 @@
 
                                     @foreach($categorys as $category)       
                                         <option value="{{$category->id}}">{{$category->cate_name}}</option>        
-                                     @endforeach
+                                    @endforeach
                             </select>              
                         </div>
                         <div class="mt-3">           

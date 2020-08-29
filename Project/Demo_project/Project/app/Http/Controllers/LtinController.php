@@ -48,12 +48,31 @@ class LtinController extends Controller
                 $output.=' <option>--Chọn loại tin--</option>';
             foreach($loaitins as $lt){
                 $output.= '<option value="'.$lt->id.'">'.$lt->name.'</option>';
-            }     
-        
-            
+            }         
         }  
         echo $output;  
     }
+
+    //Sửa loại tin
+    public function edit_ltin($id)
+    {
+        $theloais = Tloai::all(); 
+        $loaitins = Ltin::find($id);   
+        return view('loaitin.edit-ltin')->with(compact('theloais','loaitins'));
+    }
+
+    //Update loại tin
+    public function update_ltin()
+    {
+
+    }
+
+    //Xóa loại tin
+    public function delete()
+    {
+
+    }
+
 }
 ?>
  

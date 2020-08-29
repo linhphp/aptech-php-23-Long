@@ -48,15 +48,11 @@
                 <td>{{$product->product_price}} VNĐ</td>
                 <td>{{$product->product_desc}}</td>
                 <td>{{$product->product_unit}}</td>
-                <td>
-                    <form action="{{route('all_product.delete',$product->id)}}" method="post">
-                        <input type="hidden" name="_token" value="{{csrf_token()}}">
-                        <input type="hidden" name="_method" value="delete">
-                        <a href="{{URL::to('edit-product/'.$product->id)}}">Sửa</a>
-                        <a href="">Xóa</a>
-                    </form>
-                </td>
-                    
+                <td>     
+                  <a href="{{URL::to('edit-product/'.$product->id)}}">Sửa</a>
+            
+                  <a href="{{URL::to('delete-product/'.$product->id)}}">Xóa</a>    
+                </td>      
               </tr>
               @endforeach          
             </tbody>
@@ -64,9 +60,7 @@
         <br><br>
         
           <span>{{ $products->render() }}</span>
-        
-        
-
+ 
   </body>  
 
        

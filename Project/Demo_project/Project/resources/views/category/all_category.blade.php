@@ -28,13 +28,9 @@
                 <td scope="row">{{$cate->id}}</td>
                 <td scope="row">{{$cate->cate_name}}</td>
                 <td>
-                    <form action="{{route('all_category.delete',$cate->id)}}" method="post">
-                        <input type="hidden" name="_token" value="{{csrf_token()}}">
-                        <input type="hidden" name="_method" value="delete">
-                        <a href="{{URL::to('/edit-category/'.$cate->id)}}">Sửa</a>
-                        {{"/"}}
-                        <a href="">Xóa</a>
-                    </form>
+                    <a href="{{URL::to('/edit-category/'.$cate->id)}}">Sửa</a>
+                    |
+                    <a href="{{URL::to('/delete-category/'.$cate->id)}}">Xóa</a>
                 </td>
             </tr>
             @endforeach

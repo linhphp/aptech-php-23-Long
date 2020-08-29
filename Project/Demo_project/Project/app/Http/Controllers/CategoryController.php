@@ -45,14 +45,13 @@ class CategoryController extends Controller
 
   //Sửa danh mục sản phẩm
   public function edit_category($id)
-  {   
-      
+  {     
       $edit = category_product::find($id);
-        return view('category.edit_category')->with(compact('edit'));
+      return view('category.edit_category')->with(compact('edit'));
   }
 
   //Update danh mục
-  public function update(Request $request, $id)
+  public function update_category(Request $request, $id)
   {
     $category = category_product::find($id);
     $category->cate_name = $request->edit_category;
@@ -65,7 +64,8 @@ class CategoryController extends Controller
   //Xóa danh mục sản phẩm
   public function delete_category($id)
   { 
-      category_product::where('id',$id)->delete(); 
+     $category = category_product::find($id);
+     $category->delete(); 
       return Redirect::to('all-category'); 
   }
 }

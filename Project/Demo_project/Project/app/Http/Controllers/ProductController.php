@@ -37,7 +37,7 @@ class ProductController extends Controller
   public function all_product()
   {   
       
-      $products = Product::paginate(5);
+      $products = Product::orderBy('id','desc')->paginate(5);
       $category_product = category_product::all();
       
       
@@ -101,7 +101,7 @@ class ProductController extends Controller
   } 
 
   //update sản phẩm
-  public function update(Request $request,$id)
+  public function update_product(Request $request,$id)
   {
         $data = request()->validate([
           'product_name'=>'required',
@@ -142,10 +142,11 @@ class ProductController extends Controller
   }
 
   //Xóa sản phẩm
-  public function destroy()
+  public function delete_product($id)
   {
-    product::where('id',$id)->delete(); 
-      return Redirect::to('all-product');
+    $product = product::find($id);
+    $product->delete(); 
+    return Redirect::to('all-product');
   }
    
    //Địa chỉ hành chính việt nam
