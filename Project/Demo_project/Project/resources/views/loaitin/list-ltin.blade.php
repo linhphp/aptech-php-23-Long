@@ -23,7 +23,7 @@
         <table class="table table-hover table-bordered mt-5">
             <thead>
                 <tr class="text-center">
-                    <th scope="col-4" class="">#</th>
+                    <th scope="col-4" class="">ID</th>
                     <th scope="col-4" class="">Tên loại tin </th>
                     <th scope="col-4" class="">Sửa | Xóa</th>
                 </tr>

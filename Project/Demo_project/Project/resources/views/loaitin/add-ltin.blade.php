@@ -25,23 +25,15 @@
                     <form action="{{URL::to('add-ltin')}}" method="post">
                     {{csrf_field()}}
                         <div class="div mt-3">
-                            <label for="">Tên loai tin</label>
+                            <label for="">Tên loại tin</label>
                             <input type="text"class="form-control" placeholder="Tên loại tin" name="tenloaitin">        
                         </div>
                         <div class="div">
                                 <select class="form-control mt-3" name="tloai_id">
                                     <option value="0">Chọn thể loại</option>
-                                        @foreach($theloai as $tloai)
-                                            
-                                            <option value="{{$tloai->id}}">{{$tloai->name}}</option>
-                                            @foreach($theloai as $loaitin )
-
-                                                @if($loaitin->tloai_id |=0 && $loaitin->tloai_id == $tloai->id)
-                                                    <option value="{{$loaitin->id}}">{{$loaitin->name}}</option>
-                                                @endif
-                                            @endforeach
-                                           
-                                        @endforeach
+                                    @foreach($theloai as $tloai)       
+                                        <option value="{{$tloai->id}}">{{$tloai->name}}</option>        
+                                     @endforeach
                                 </select>
                             </div>
                         <button type="submit" class="btn-primary mt-3">Thêm loại tin</button>

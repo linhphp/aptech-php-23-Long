@@ -56,14 +56,22 @@ class LtinController extends Controller
     //Sửa loại tin
     public function edit_ltin($id)
     {
-        $theloais = Tloai::all(); 
-        $loaitins = Ltin::find($id);   
-        return view('loaitin.edit-ltin')->with(compact('theloais','loaitins'));
+        $theloai = Tloai::all(); 
+        $loaitin = Ltin::find($id);   
+        return view('loaitin.edit-ltin',[
+            'theloai'=> $theloai,
+            'loaitin'=>$loaitin 
+        ]);
     }
 
     //Update loại tin
-    public function update_ltin()
+    public function update_ltin(request $request,$id)
     {
+        $loaitin = Ltin::find($id);
+        $loaitin->name = $request->name;
+        $loaitin->tloai_id = $request->tloai_id;
+        $loaitin->save();
+        return redirect::to('list-ltin');
 
     }
 

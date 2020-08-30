@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thêm loại tin</title>
+    <title>Cập nhật loại tin</title>
     <link rel="stylesheet" href="{{asset('/bootstrap.css')}}">
 </head>
 <body>
@@ -18,23 +18,35 @@
 
             <header class="col-xs-4 col-md-4 mx-auto text-primary">
             
-            Thêm loại tin
+            Cập nhật loại tin
             </header>
             
                 <div class="col-xs-4 col-md-4 mx-auto">
-                    <form action="{{URL::to('update-ltin/')}}" method="post">
-                    {{csrf_field()}}
+                    <form action="{{URL::to('update-ltin/'.$loaitin->id)}}" method="post">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+            
                         <div class="div mt-3">
-                            <label for="">Tên loai tin</label>
-                            <input type="text"class="form-control" placeholder="{{$loaitins->name}}" name="tenloaitin">        
+                            <label for="">Tên loại tin</label>
+                            <input type="text"class="form-control" placeholder="{{$loaitin->name}}"name="name">
                         </div>
-                        <div class="div">
-                                <select class="form-control mt-3" name="tloai_id">
-                                    <option value="0">Chọn thể loại</option>
-                                       
-                                </select>
-                            </div>
-                        <button type="submit" class="btn-primary mt-3">Thêm loại tin</button>
+                        <div class="div mt-3">
+                            <label for="">Tên thể loại</label>
+                            <select class="form-control" name="tloai_id">
+
+                                @foreach($theloai as $tloai)
+                                    <option 
+                                    @if($loaitin->tloai_id == $tloai->id)
+                                        {{"selected"}}                    
+                                    @endif
+                                    value="{{$tloai->id}}">{{$tloai->name}}</option>
+                                @endforeach       
+                            </select>
+                        </div>
+                        <div class="div mt-3 ">
+                            <label for="">Tên loại tin mới</label>
+                            <input type="text"class="form-control" placeholder="Tên loại tin mới" name="name">
+                        </div>
+                        <button type="submit" class="btn-primary mt-3">Cập nhật loại tin</button>
                     
                     </form>
                 
