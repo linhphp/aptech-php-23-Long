@@ -11,7 +11,7 @@ class Tloai extends Model
 
     public function Ltin()
     {
-        return $this->hasOne('App\Ltin','tloai_id');
+        return $this->hasMany('App\Ltin','tloai_id');
     } 
 
 }

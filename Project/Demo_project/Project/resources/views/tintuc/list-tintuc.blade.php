@@ -22,7 +22,7 @@
                 <th scope="col" class="">Danh mục loại tin</th>
                 <th scope="col" class="">Mô tả bài viết</th>
                 <th scope="col" class="">Nội dung bài viết</th>
-                <th scope="col" class="">Sữa/Xóa</th>   
+                <th scope="col" class="">Sửa | Xóa</th>   
               </tr>
             </thead>
             <tbody>
@@ -37,10 +37,11 @@
                       <img src="public/image/{{$tt->post_image}}"height="100" width="100">
                     </td>
                     <td>{{$tt->content}}</td>
-                    <td class="d-flex ">
+                    <td class="text-center">
                      
-                        <button class="m-2 ">Sửa</button>
-                        <button class="m-2 ">Xóa</button>
+                      <a href="{{URL::to('/edit-tintuc/'.$tt->id)}}">Sửa</a>
+                       | 
+                      <a href="{{URL::to('/delete-tintuc/'.$tt->id)}}">Xóa</a>
                       
                     </td>  
                 </tr>

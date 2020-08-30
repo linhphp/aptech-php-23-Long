@@ -76,9 +76,11 @@ class LtinController extends Controller
     }
 
     //Xóa loại tin
-    public function delete()
+    public function delete($id)
     {
-
+        $loaitin = Ltin::find($id);
+        $loaitin->delete();
+        return redirect::to('list-ltin');    
     }
 
 }

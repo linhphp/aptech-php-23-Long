@@ -82,6 +82,9 @@ Route::get('add-tintuc','TintucController@add_tintuc');
 Route::post('/save-tintuc','TintucController@store');
 Route::get('/all-tintuc','TintucController@all_tintuc');
 Route::get('/baiviet/{id}','TintucController@chitiet');
+Route::get('/edit-tintuc/{id}','TintucController@edit_tintuc');
+Route::post('/update-tintuc/{id}','TintucController@update_tintuc');
+Route::get('delete-tintuc/{id}','TintucController@delete');
 
 //
 Route::post('/ajax-add','LtinController@ajax_add');
