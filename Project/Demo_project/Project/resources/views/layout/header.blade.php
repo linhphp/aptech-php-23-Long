@@ -2,7 +2,7 @@
     <div class="col-12 ">
       <div class="d-flex ">
         
-        <div class="col-6">
+        <div class="col-3">
           <div class="d-flex mx-auto">
             <h1 class=" font-weight-bold text-white ">G-Nol </h1>
             <i class="fas fa-donate" style="font-size:36px;color:#0099FF;"></i>
@@ -14,8 +14,8 @@
           
         </div>
         
-        <div class="col-3">
-          
+        <div class="col-6 text-left m-0">
+         
         </div>
         <div class="col-3 mt-3 d-block">
           

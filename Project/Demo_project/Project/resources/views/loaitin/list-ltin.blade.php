@@ -32,7 +32,7 @@
             @foreach($loaitin as $ltin)
             <tr class="text-center">
                 <td scope="row">{{$ltin->id}}</td>
-                <td scope="row">{{$ltin->name}}</td>
+                <td scope="row"> <a href=""> {{$ltin->name}}</a></td>
                 <td>
                 <a href="{{URL::to('/edit-ltin/'.$ltin->id)}}">Sửa</a>
                 |
