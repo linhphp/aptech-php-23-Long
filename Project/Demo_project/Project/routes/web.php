@@ -54,12 +54,8 @@ Route::post('/update-cart','CartController@update');
 Route::get('cart','CartController@index');
 
 //Check-out
-Route::get('check-out','UserController@check_out');
-
-//address
-Route::get('/address','ProductController@tinhthanh');
-Route::get('/address/{idmatp}','ProductController@gettinhthanh');
-
+Route::get('check-out','CheckoutController@check_out');
+Route::post('diachi','CheckoutController@diachi');
 //Thể loại 
 Route::get('add-tloai','TloaiController@add_tloai');
 Route::post('/add-tloai','TloaiController@save_tloai');

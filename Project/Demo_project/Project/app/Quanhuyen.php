@@ -10,5 +10,16 @@ class Quanhuyen extends Model
     protected $table="quanhuyen";
     protected $primaryKey ="maqh";
     protected $fillable = ['name_qh','type','matp'];
+
+    public function Thanhpho()
+    {
+        return $this->belongsTo('App\Thanhpho','matp','maqh');
+    } 
+    
+
+    public function Xaphuong()
+    {
+        return $this->hasMany('App\Xaphuong','maqh','xaid');
+    } 
     
 }

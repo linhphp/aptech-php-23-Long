@@ -121,10 +121,5 @@ class UserController extends Controller
     }
 
 
-    //Thanh toán
-    public function check_out()
-    {
-        return view('check-out.check-out');
-    }
-
+    
 }

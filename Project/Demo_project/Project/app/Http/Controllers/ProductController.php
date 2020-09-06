@@ -149,22 +149,5 @@ class ProductController extends Controller
     return Redirect::to('all-product');
   }
    
-   //Địa chỉ hành chính việt nam
-   public function address()
-   {
-     return view('users.address');
-   }
-
-   public function tinhthanh()
-   {
-     $thanhpho = DB::table('devvn_tinhthanhpho')->get();
-     $quanhuyen = DB::table('devvn_quanhuyen')->get();
-     $xaphuong = DB::table('devvn_xaphuongthitran')->get();
-
-     return view('users.address',[
-       'thanhpho'=>$thanhpho,
-       'quanhuyen'=>$quanhuyen,
-       'xaphuong'=>$xaphuong
-     ]);
-   }
-  } 
+   
+} 

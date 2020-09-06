@@ -11,5 +11,8 @@ class Thanhpho extends Model
     protected $primaryKey ="matp";
     protected $fillable = ['name_tp','type'];
     
-
+    public function Quanhuyen()
+    {
+        return $this->hasMany('App\Quanhuyen','matp');
+    }
 }
